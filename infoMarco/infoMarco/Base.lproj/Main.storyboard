@@ -219,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="3145" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Reservaciones-->
         <scene sceneID="mjS-nG-z7F">
             <objects>
-                <viewController id="PLo-6h-gSb" sceneMemberID="viewController">
+                <viewController id="PLo-6h-gSb" customClass="ViewControllerReservaciones" customModule="infoMarco" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYP-Qb-Xb0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

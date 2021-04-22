@@ -43,13 +43,6 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-//      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//      
-//          let vistaDetalle = segue.destination as! ViewControllerDetalleEvento
-//          let indice = tableView.indexPathForSelectedRow!
-//          vistaDetalle.unEvento = listaEventos[indice.row]
-//          
-//          
-//      }
+
 
 }

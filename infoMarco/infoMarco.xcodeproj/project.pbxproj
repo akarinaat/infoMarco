@@ -17,6 +17,7 @@
 		5A810AAB262E268400A26010 /* infoMarcoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810AAA262E268400A26010 /* infoMarcoUITests.swift */; };
 		5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */; };
 		5A810AC4263121B300A26010 /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810AC3263121B300A26010 /* Eventos.swift */; };
+		5A810AC926313E9E00A26010 /* ViewControllerReservaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810AC826313E9E00A26010 /* ViewControllerReservaciones.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5A810AAC262E268400A26010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEventos.swift; sourceTree = "<group>"; };
 		5A810AC3263121B300A26010 /* Eventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
+		5A810AC826313E9E00A26010 /* ViewControllerReservaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReservaciones.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				5A810A8A262E268300A26010 /* SceneDelegate.swift */,
 				5A810A8C262E268300A26010 /* ViewController.swift */,
 				5A810A8E262E268300A26010 /* Main.storyboard */,
+				5A810AC826313E9E00A26010 /* ViewControllerReservaciones.swift */,
 				5A810AC3263121B300A26010 /* Eventos.swift */,
 				5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */,
 				5A810A91262E268400A26010 /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 				5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */,
 				5A810A89262E268300A26010 /* AppDelegate.swift in Sources */,
 				5A810A8B262E268300A26010 /* SceneDelegate.swift in Sources */,
+				5A810AC926313E9E00A26010 /* ViewControllerReservaciones.swift in Sources */,
 				5A810AC4263121B300A26010 /* Eventos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
