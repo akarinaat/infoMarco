@@ -16,6 +16,9 @@
 		5A810AA0262E268400A26010 /* infoMarcoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A9F262E268400A26010 /* infoMarcoTests.swift */; };
 		5A810AAB262E268400A26010 /* infoMarcoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810AAA262E268400A26010 /* infoMarcoUITests.swift */; };
 		5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */; };
+		941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */; };
+		941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */; };
+		941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		5A810AAA262E268400A26010 /* infoMarcoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoMarcoUITests.swift; sourceTree = "<group>"; };
 		5A810AAC262E268400A26010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEventos.swift; sourceTree = "<group>"; };
+		941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInformacionPersonal.swift; sourceTree = "<group>"; };
+		941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLectorEventos.swift; sourceTree = "<group>"; };
+		941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQRScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,9 @@
 				5A810A8A262E268300A26010 /* SceneDelegate.swift */,
 				5A810A8C262E268300A26010 /* ViewController.swift */,
 				5A810A8E262E268300A26010 /* Main.storyboard */,
+				941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */,
+				941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */,
+				941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */,
 				5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */,
 				5A810A91262E268400A26010 /* Assets.xcassets */,
 				5A810A93262E268400A26010 /* LaunchScreen.storyboard */,
@@ -261,7 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */,
+				941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */,
 				5A810A8D262E268300A26010 /* ViewController.swift in Sources */,
+				941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */,
 				5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */,
 				5A810A89262E268300A26010 /* AppDelegate.swift in Sources */,
 				5A810A8B262E268300A26010 /* SceneDelegate.swift in Sources */,
@@ -441,13 +453,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C693QG82U6;
+				DEVELOPMENT_TEAM = 6J345HLT3T;
 				INFOPLIST_FILE = infoMarco/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ITESM.infoMarco;
+				PRODUCT_BUNDLE_IDENTIFIER = Tec.demoProtocolos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -460,13 +472,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C693QG82U6;
+				DEVELOPMENT_TEAM = 6J345HLT3T;
 				INFOPLIST_FILE = infoMarco/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ITESM.infoMarco;
+				PRODUCT_BUNDLE_IDENTIFIER = Tec.demoProtocolos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
