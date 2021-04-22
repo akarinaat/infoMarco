@@ -15,7 +15,7 @@ class ViewControllerPromoBeneficios: UIViewController {
     @IBOutlet weak var lbTitlePlatinum: UILabel!
     @IBOutlet weak var lbTitleGold: UILabel!
     @IBOutlet weak var lbTitleDiamond: UILabel!
-    var current = 2
+    var current = 3
 
     @IBOutlet weak var platinumView: UIView!
     @IBOutlet weak var goldView: UIView!
