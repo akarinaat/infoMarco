@@ -7,6 +7,19 @@
 
 import UIKit
 
-class Eventos: NSObject {
-
+class Evento: NSObject {
+    var titulo: String = ""
+    var descripcion: String = ""
+    var foto: UIImage!
+    var boton: UIButton!
+ 
+    
+    init(titulo: String,descripcion: String, foto: UIImage!, boton: UIButton!){
+        
+        self.titulo = titulo
+        self.descripcion = descripcion
+        self.foto = foto
+        self.boton = boton
+        
+    }
 }
