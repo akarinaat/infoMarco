@@ -74,8 +74,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Registrarse"/>
                                 <connections>
-                                    <action selector="registrarse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nrx-rT-UYU"/>
-                                    <segue destination="O2p-yc-tCR" kind="show" identifier="registroApp" id="K1D-Sp-U39"/>
+                                    <segue destination="i37-0c-NPo" kind="show" identifier="" id="zEp-Xi-bPH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,6 +89,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="528.98550724637687" y="93.75"/>
+        </scene>
+        <!--View Controller Registro-->
+        <scene sceneID="q99-2U-d3Q">
+            <objects>
+                <viewController id="i37-0c-NPo" customClass="ViewControllerRegistro" customModule="infoMarco" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G4f-5k-EjI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCt-gQ-1XM">
+                                <rect key="frame" x="61" y="206" width="292" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tfEmail:" destination="zfT-Hj-qfU" eventType="editingDidEnd" id="jEa-8S-un5"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9W-ml-ClZ">
+                                <rect key="frame" x="61" y="334" width="292" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rV1-rR-LSb">
+                                <rect key="frame" x="142" y="500" width="130" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <state key="normal" title="Registrarse"/>
+                                <connections>
+                                    <action selector="registrarse:" destination="i37-0c-NPo" eventType="touchUpInside" id="6RV-Gr-0vf"/>
+                                    <segue destination="O2p-yc-tCR" kind="show" identifier="registroApp" id="vcJ-Zi-L00"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pLQ-eK-eEd"/>
+                        <color key="backgroundColor" red="0.95659333469999996" green="0.92971223589999996" blue="0.90588676930000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wfZ-kf-Sy8"/>
+                    <connections>
+                        <outlet property="tfContrasena" destination="y9W-ml-ClZ" id="w8l-r2-EE0"/>
+                        <outlet property="tfEmail" destination="cCt-gQ-1XM" id="c3W-Rx-BMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYU-D4-az5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="zfT-Hj-qfU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1360.8695652173915" y="-556.47321428571422"/>
         </scene>
         <!--View Controller Eventos-->
         <scene sceneID="6pO-Bj-CAy">
@@ -135,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Tu-hc-Aon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="94"/>
+            <point key="canvasLocation" x="1361" y="287"/>
         </scene>
         <!--View Controller Informacion Personal-->
         <scene sceneID="7dm-OO-HIr">
