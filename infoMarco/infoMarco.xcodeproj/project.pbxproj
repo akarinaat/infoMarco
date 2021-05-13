@@ -19,6 +19,7 @@
 		5A810AAB262E268400A26010 /* infoMarcoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810AAA262E268400A26010 /* infoMarcoUITests.swift */; };
 		5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */; };
 		5A8143CF2641E85C002463AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A8143CE2641E85C002463AA /* GoogleService-Info.plist */; };
+		5A92B16D264CD3FA00B42ECB /* ViewControllerPopOverRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92B16C264CD3FA00B42ECB /* ViewControllerPopOverRegister.swift */; };
 		941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */; };
 		941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */; };
 		941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */; };
@@ -62,6 +63,7 @@
 		5A810AAC262E268400A26010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEventos.swift; sourceTree = "<group>"; };
 		5A8143CE2641E85C002463AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A92B16C264CD3FA00B42ECB /* ViewControllerPopOverRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPopOverRegister.swift; sourceTree = "<group>"; };
 		7893CBCBDE35205DD116ABCB /* Pods-infoMarco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infoMarco.release.xcconfig"; path = "Target Support Files/Pods-infoMarco/Pods-infoMarco.release.xcconfig"; sourceTree = "<group>"; };
 		941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInformacionPersonal.swift; sourceTree = "<group>"; };
 		941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLectorEventos.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				5A810A8A262E268300A26010 /* SceneDelegate.swift */,
 				5A810A8C262E268300A26010 /* ViewController.swift */,
 				5A810A8E262E268300A26010 /* Main.storyboard */,
+				5A92B16C264CD3FA00B42ECB /* ViewControllerPopOverRegister.swift */,
 				5A3EE15C26421EED0092CB87 /* ViewControllerRegistro.swift */,
 				941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */,
 				941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */,
@@ -375,6 +378,7 @@
 				526F9C752630CD7C005567ED /* ViewControllerPromoBeneficios.swift in Sources */,
 				5A810A89262E268300A26010 /* AppDelegate.swift in Sources */,
 				5A810A8B262E268300A26010 /* SceneDelegate.swift in Sources */,
+				5A92B16D264CD3FA00B42ECB /* ViewControllerPopOverRegister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

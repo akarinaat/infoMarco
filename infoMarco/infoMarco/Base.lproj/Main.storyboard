@@ -127,7 +127,9 @@
                                 <state key="normal" title="Registrarse"/>
                                 <connections>
                                     <action selector="registrarse:" destination="i37-0c-NPo" eventType="touchUpInside" id="6RV-Gr-0vf"/>
-                                    <segue destination="O2p-yc-tCR" kind="show" identifier="registroApp" id="vcJ-Zi-L00"/>
+                                    <segue destination="v6a-hd-neR" kind="popoverPresentation" popoverAnchorView="rV1-rR-LSb" id="lRD-g2-1gM">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,6 +146,53 @@
                 <exit id="zfT-Hj-qfU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1360.8695652173915" y="-556.47321428571422"/>
+        </scene>
+        <!--View Controller Pop Over Register-->
+        <scene sceneID="qWV-xD-irr">
+            <objects>
+                <viewController id="v6a-hd-neR" customClass="ViewControllerPopOverRegister" customModule="infoMarco" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWP-GV-CGc">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6br-xp-65c">
+                                <rect key="frame" x="27" y="64" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6O-nr-sZu">
+                                <rect key="frame" x="113" y="129" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="okButton:" destination="v6a-hd-neR" eventType="touchUpInside" id="4A0-J9-tbr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6 caracteres" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIh-Ow-bLx">
+                                <rect key="frame" x="32" y="60" width="182" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contraseña mínimo de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvj-xN-MM9">
+                                <rect key="frame" x="37" y="29" width="182" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aLI-LZ-Xba"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <size key="freeformSize" width="250" height="200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6g-R3-ty6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962" y="-556"/>
         </scene>
         <!--View Controller Eventos-->
         <scene sceneID="6pO-Bj-CAy">
@@ -1344,9 +1393,6 @@
             <point key="canvasLocation" x="11833" y="84"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="iFc-BV-bsh"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Screen Shot 2021-04-19 at 16.10.24" width="544" height="428"/>
         <image name="camera" width="200" height="200"/>
