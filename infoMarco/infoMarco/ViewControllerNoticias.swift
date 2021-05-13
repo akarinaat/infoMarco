@@ -1,20 +1,20 @@
 //
-//  ViewControllerEventos.swift
+//  ViewControllerNoticias.swift
 //  infoMarco
 //
-//  Created by Karina Amador Teran on 19/04/21.
+//  Created by user188713 on 5/11/21.
 //
 
 import UIKit
 
-class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewControllerNoticias: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
 
     var sBorrar = ["Prueba"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     // MARK: Metodos del Data Source
@@ -27,7 +27,7 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventos")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaNoticias")!
         
         cell.textLabel?.text = sBorrar[indexPath.row]
         
@@ -35,7 +35,6 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
         
     }
 
-    
     /*
     // MARK: - Navigation
 
