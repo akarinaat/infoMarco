@@ -32,7 +32,7 @@ class ViewController: UIViewController {
             
             return false
             
-        } else { // Verificar formato del correo escrito
+        } else { // Verificar formato del correo escrito usando Regex
         
             let emailREx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-}]+\\.[A-Za-z]{2,64}"
             
@@ -64,23 +64,15 @@ class ViewController: UIViewController {
         
         if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
             
-            print("Valido")
+            print("Valido") // Imprimir si el correo es valido
             return true
             
         } else {
             
-            print("Invalido")
+            print("Invalido") // Imprimir si el correo NO es valido
             return false
             
         }
     }
-
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                
-    }*/
-    
-
-
 }
 
