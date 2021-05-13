@@ -24,10 +24,13 @@ class ViewControllerRegistro: UIViewController {
     }
     
     @IBAction func registrarse(_ sender: Any) {
+        
+
         Auth.auth().createUser(withEmail: tfEmail.text!, password: tfContrasena.text!) { authResult, error in
           
-            if let e = error{
-                print (e)
+            if let e = error {
+//                AQUÍ PONER EL POP OVER
+                print (e.localizedDescription)
             } else {
 //                Ir a la página de eventos: viewControllerEventos
                 self.performSegue(withIdentifier: "registroApp", sender: self)

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 
 class ViewController: UIViewController {
@@ -22,7 +23,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    
+    @IBAction func loginPressed(_ sender: Any) {
+        if let email = tfEmail.text, let password = tfContrasena.text{
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+//                AQUI EL POP OVER
+                if let e = error {
+                    print (e)
+                } else {
+                    self.performSegue(withIdentifier: "loginApp", sender: self)
+                }
+              // ...
+            }
+        }
+        
+        
+        
+    }
+    
     
     
 }
