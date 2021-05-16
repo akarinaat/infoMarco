@@ -1,15 +1,13 @@
 //
-//  ViewControllerReservacion.swift
+//  ViewControllerConfirmacionReservacion.swift
 //  infoMarco
 //
-//  Created by user188713 on 5/11/21.
+//  Created by Karina Amador Teran on 16/05/21.
 //
 
 import UIKit
 
-class ViewControllerReservacion: UIViewController {
-    
-    var evento: String!
+class ViewControllerConfirmacionReservacion: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +16,6 @@ class ViewControllerReservacion: UIViewController {
     }
     
 
-    @IBAction func btBacktoEvents(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
     /*
     // MARK: - Navigation
 
