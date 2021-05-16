@@ -9,7 +9,7 @@ import UIKit
 
 class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var sBorrar = ["Prueba"]
+    var sBorrar = ["Evento 1","Evento 2","Evento 3","Evento 4", "Evento 5"]
     
     @IBOutlet weak var tableView: UITableView!
     

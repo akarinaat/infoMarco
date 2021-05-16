@@ -9,11 +9,20 @@ import UIKit
 
 class ViewControllerConfirmacionReservacion: UIViewController {
 
+    var boletos: String!
+    var nombreEvento: String!
+    
+    @IBOutlet weak var lbNoBletos: UILabel!
+    
+    @IBOutlet weak var lbNombreEvento: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        lbNoBletos.text = boletos
+        lbNombreEvento.text = nombreEvento
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
