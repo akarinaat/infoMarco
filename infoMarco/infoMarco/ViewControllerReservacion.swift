@@ -21,9 +21,10 @@ class ViewControllerReservacion: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    @IBAction func btBacktoEvents(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func regresar(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
     }
     
     // MARK: - Navigation

@@ -37,18 +37,18 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
         
     }
 
+    
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vistaNavigation = segue.destination as! UINavigationController
-        let vistaReservaciones = vistaNavigation.topViewController as! ViewControllerReservacion
-        let indice = tableView.indexPathForSelectedRow!
-        
-        vistaReservaciones.evento = sBorrar[indice.row]
-        
-    
-    }
-    
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         let vistaReservaciones = segue.destination as!  ViewControllerReservacion
+         let indice = tableView.indexPathForSelectedRow!
+         
+         vistaReservaciones.evento = sBorrar[indice.row]
+         
+     
+     }
 
 }

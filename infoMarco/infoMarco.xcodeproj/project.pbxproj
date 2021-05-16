@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		526F9C752630CD7C005567ED /* ViewControllerPromoBeneficios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */; };
+		5A51EE4E2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */; };
+		5A51EE532650A9750051E11B /* ViewControllerAdminNoticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */; };
+		5A51EE582650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */; };
+		5A51EE5D2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */; };
+		5A51EE622650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE612650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift */; };
 		5A810A89262E268300A26010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A88262E268300A26010 /* AppDelegate.swift */; };
 		5A810A8B262E268300A26010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A8A262E268300A26010 /* SceneDelegate.swift */; };
 		5A810A8D262E268300A26010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A8C262E268300A26010 /* ViewController.swift */; };
@@ -17,11 +22,16 @@
 		5A810AA0262E268400A26010 /* infoMarcoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A9F262E268400A26010 /* infoMarcoTests.swift */; };
 		5A810AAB262E268400A26010 /* infoMarcoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810AAA262E268400A26010 /* infoMarcoUITests.swift */; };
 		5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */; };
-		5A8E733126516F8800976678 /* ViewControllerConfirmacionReservacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E733026516F8800976678 /* ViewControllerConfirmacionReservacion.swift */; };
 		5A8F3D79264CA46500D19AA5 /* ViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F3D78264CA46500D19AA5 /* ViewControllerConfig.swift */; };
 		5A9F6144264B9F7A000FF861 /* ViewControllerNoticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F6143264B9F7A000FF861 /* ViewControllerNoticias.swift */; };
 		5A9F6149264BA03A000FF861 /* ViewControllerRenovacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F6148264BA03A000FF861 /* ViewControllerRenovacion.swift */; };
 		5A9F614E264BA1B1000FF861 /* ViewControllerReservacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F614D264BA1B1000FF861 /* ViewControllerReservacion.swift */; };
+		5AA40AB02651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */; };
+		5ABA96B126504495004A4D55 /* ViewControllerMembresias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABA96B026504495004A4D55 /* ViewControllerMembresias.swift */; };
+		5ACFAE1E26506B7600AA5CF8 /* ViewControllerAdminEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */; };
+		5AEA4A682651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */; };
+		5AEA4A6D2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA4A6C2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift */; };
+		5AF79B0B26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF79B0A26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift */; };
 		941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */; };
 		941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */; };
 		941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */; };
@@ -46,6 +56,11 @@
 
 /* Begin PBXFileReference section */
 		526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPromoBeneficios.swift; sourceTree = "<group>"; };
+		5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarEvento.swift; sourceTree = "<group>"; };
+		5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminNoticias.swift; sourceTree = "<group>"; };
+		5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminNoticiasDetalle.swift; sourceTree = "<group>"; };
+		5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPromoBeneficios.swift; sourceTree = "<group>"; };
+		5A51EE612650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPromosBeneficiosDetalle.swift; sourceTree = "<group>"; };
 		5A810A85262E268300A26010 /* infoMarco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infoMarco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A810A88262E268300A26010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A810A8A262E268300A26010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,11 +76,16 @@
 		5A810AAA262E268400A26010 /* infoMarcoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoMarcoUITests.swift; sourceTree = "<group>"; };
 		5A810AAC262E268400A26010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEventos.swift; sourceTree = "<group>"; };
-		5A8E733026516F8800976678 /* ViewControllerConfirmacionReservacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfirmacionReservacion.swift; sourceTree = "<group>"; };
 		5A8F3D78264CA46500D19AA5 /* ViewControllerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfig.swift; sourceTree = "<group>"; };
 		5A9F6143264B9F7A000FF861 /* ViewControllerNoticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNoticias.swift; sourceTree = "<group>"; };
 		5A9F6148264BA03A000FF861 /* ViewControllerRenovacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRenovacion.swift; sourceTree = "<group>"; };
 		5A9F614D264BA1B1000FF861 /* ViewControllerReservacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReservacion.swift; sourceTree = "<group>"; };
+		5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfirmacionReservacion.swift; sourceTree = "<group>"; };
+		5ABA96B026504495004A4D55 /* ViewControllerMembresias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMembresias.swift; sourceTree = "<group>"; };
+		5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminEventos.swift; sourceTree = "<group>"; };
+		5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarNoticia.swift; sourceTree = "<group>"; };
+		5AEA4A6C2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarPromoBeneficio.swift; sourceTree = "<group>"; };
+		5AF79B0A26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminEventosDetalle.swift; sourceTree = "<group>"; };
 		941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInformacionPersonal.swift; sourceTree = "<group>"; };
 		941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLectorEventos.swift; sourceTree = "<group>"; };
 		941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQRScanner.swift; sourceTree = "<group>"; };
@@ -119,11 +139,21 @@
 		5A810A87262E268300A26010 /* infoMarco */ = {
 			isa = PBXGroup;
 			children = (
+				5AEA4A6C2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift */,
+				5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */,
+				5A51EE612650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift */,
 				5A810A88262E268300A26010 /* AppDelegate.swift */,
 				5A810A8A262E268300A26010 /* SceneDelegate.swift */,
 				5A810A8C262E268300A26010 /* ViewController.swift */,
 				5A810A8E262E268300A26010 /* Main.storyboard */,
-				5A8E733026516F8800976678 /* ViewControllerConfirmacionReservacion.swift */,
+				5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */,
+				5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */,
+				5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */,
+				5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */,
+				5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */,
+				5AF79B0A26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift */,
+				5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */,
+				5ABA96B026504495004A4D55 /* ViewControllerMembresias.swift */,
 				5A8F3D78264CA46500D19AA5 /* ViewControllerConfig.swift */,
 				5A9F614D264BA1B1000FF861 /* ViewControllerReservacion.swift */,
 				5A9F6148264BA03A000FF861 /* ViewControllerRenovacion.swift */,
@@ -289,16 +319,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A9F6144264B9F7A000FF861 /* ViewControllerNoticias.swift in Sources */,
+				5AEA4A6D2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift in Sources */,
 				941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */,
+				5A51EE5D2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift in Sources */,
+				5ACFAE1E26506B7600AA5CF8 /* ViewControllerAdminEventos.swift in Sources */,
 				941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */,
+				5A51EE622650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift in Sources */,
 				5A810A8D262E268300A26010 /* ViewController.swift in Sources */,
+				5A51EE532650A9750051E11B /* ViewControllerAdminNoticias.swift in Sources */,
+				5ABA96B126504495004A4D55 /* ViewControllerMembresias.swift in Sources */,
 				5A9F614E264BA1B1000FF861 /* ViewControllerReservacion.swift in Sources */,
 				941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */,
 				5A8F3D79264CA46500D19AA5 /* ViewControllerConfig.swift in Sources */,
+				5AEA4A682651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift in Sources */,
+				5AA40AB02651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift in Sources */,
 				5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */,
-				5A8E733126516F8800976678 /* ViewControllerConfirmacionReservacion.swift in Sources */,
 				526F9C752630CD7C005567ED /* ViewControllerPromoBeneficios.swift in Sources */,
+				5AF79B0B26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift in Sources */,
 				5A810A89262E268300A26010 /* AppDelegate.swift in Sources */,
+				5A51EE582650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift in Sources */,
+				5A51EE4E2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift in Sources */,
 				5A9F6149264BA03A000FF861 /* ViewControllerRenovacion.swift in Sources */,
 				5A810A8B262E268300A26010 /* SceneDelegate.swift in Sources */,
 			);

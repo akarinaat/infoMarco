@@ -62,16 +62,21 @@ class ViewController: UIViewController {
     // Evitar ejecucion de segue validando si se escribe un correo valido y una contrasenia
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
-            
-            print("Valido") // Imprimir si el correo es valido
-            return true
-            
+        if identifier == "LogIn"{
+            if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
+                
+                print("Valido") // Imprimir si el correo es valido
+                return true
+                
+            } else {
+                
+                print("Invalido") // Imprimir si el correo NO es valido
+                return false
+                
+            }
         } else {
-            
-            print("Invalido") // Imprimir si el correo NO es valido
+            print("No abro")
             return false
-            
         }
     }
 }

@@ -1,27 +1,29 @@
 //
-//  ViewControllerConfirmacionReservacion.swift
+//  ViewControllerAdminPublicarEvento.swift
 //  infoMarco
 //
-//  Created by Karina Amador Teran on 16/05/21.
+//  Created by user188713 on 5/15/21.
 //
 
 import UIKit
 
-class ViewControllerConfirmacionReservacion: UIViewController {
+class ViewControllerAdminPublicarEvento: UIViewController {
 
-    var boletos: String!
-    var nombreEvento: String!
-    
-    @IBOutlet weak var lbNoBletos: UILabel!
-    @IBOutlet weak var lbNombreEvento: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        lbNoBletos.text = boletos
-        lbNombreEvento.text = nombreEvento
+
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func regresar(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    // LA VISTA NO ES MODAL, NO ES NECESARIO UN UNWIND
+    // Aunque puedo equivocarme, sería revoltoso visualmente hablando
+    
     /*
     // MARK: - Navigation
 
