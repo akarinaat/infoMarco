@@ -47,6 +47,9 @@ class ViewControllerPromoBeneficios: UIViewController {
     }
     
 
+    @IBAction func backBT(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
