@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qyF-IS-l0X">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -132,7 +132,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="PLo-6h-gSb" kind="presentation" id="gEa-Hs-xEH"/>
+                                            <segue destination="Tiq-6M-IUx" kind="presentation" id="gEa-Hs-xEH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -152,6 +152,9 @@
                         <color key="backgroundColor" red="0.99215686274509807" green="0.9137254901960784" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Eventos" image="star" catalog="system" id="D2n-XK-ZKs"/>
+                    <connections>
+                        <outlet property="tableView" destination="q0p-On-Hjd" id="Ode-rr-xF9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Tu-hc-Aon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -350,10 +353,17 @@
                         <viewLayoutGuide key="safeArea" id="qo3-sf-BP7"/>
                         <color key="backgroundColor" red="0.99207574129999998" green="0.9127939343" blue="0.84811216590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0fn-sJ-2RB">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Yfz-G4-AcC">
+                            <connections>
+                                <action selector="btBacktoEvents:" destination="PLo-6h-gSb" id="vyR-VG-2Es"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGw-sK-JNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="-1455"/>
+            <point key="canvasLocation" x="2550.7246376811595" y="-1455.1339285714284"/>
         </scene>
         <!--View Controller Promo Beneficios-->
         <scene sceneID="hNo-eK-fjg">
@@ -465,10 +475,10 @@
             </objects>
             <point key="canvasLocation" x="589.85507246376812" y="1484.5982142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Confirmacion Reservacion-->
         <scene sceneID="A8f-hg-iEk">
             <objects>
-                <viewController id="r9U-dc-Cz4" sceneMemberID="viewController">
+                <viewController id="r9U-dc-Cz4" customClass="ViewControllerConfirmacionReservacion" customModule="infoMarco" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rcY-qz-K6P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -540,7 +550,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3z-cY-rk8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="-767"/>
+            <point key="canvasLocation" x="3384.057971014493" y="-1455.1339285714284"/>
         </scene>
         <!--View Controller Lector Eventos-->
         <scene sceneID="47E-fn-fLg">
@@ -1323,6 +1333,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1h-FU-ASD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-320.28985507246381" y="1484.5982142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zbQ-66-kPp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tiq-6M-IUx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="29S-Ed-nx8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PLo-6h-gSb" kind="relationship" relationship="rootViewController" id="a6k-CD-wBb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RxP-fK-0CV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640.5797101449277" y="-1455.1339285714284"/>
         </scene>
     </scenes>
     <resources>
