@@ -7,8 +7,19 @@
 
 import UIKit
 
+protocol protocoloAgregaEvento {
+    func agregarEvento (ev: Evento)
+}
+
 class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var imgFoto: UIImageView!
+    @IBOutlet weak var tfTitulo: UITextField!
+    @IBOutlet weak var tvContenido: UITextView!
+    
+    var delegado : protocoloAgregaEvento!
+    var counterEvent = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,6 +48,13 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         
     }
     
+    @IBAction func botonPublicar(_ sender: UIButton) {
+        
+        let evento = Evento(iD: "marcoEvent"+String(counterEvent), titulo: tfTitulo.text!, contenido: tvContenido.text!, imagen: imgFoto.image!)
+        delegado.agregarEvento(ev: evento)
+        dismiss(animated: true, completion: nil)
+        
+    }
     
     // LA VISTA NO ES MODAL, NO ES NECESARIO UN UNWIND
     // Aunque puedo equivocarme, sería revoltoso visualmente hablando
@@ -54,11 +72,14 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
     // MARK: - Metodos de delegado de UIImage Picker Controller
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        <#code#>
+        
+        let foto = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        imgFoto.image = foto
+        dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        <#code#>
+        dismiss(animated: true, completion: nil)
     }
 
 }
