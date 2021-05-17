@@ -11,7 +11,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfContrasena: UITextField!
-
+    @IBOutlet weak var switchBORRAR: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -59,25 +60,40 @@ class ViewController: UIViewController {
     
     // MARK: - Navigation
     
-    // Evitar ejecucion de segue validando si se escribe un correo valido y una contrasenia
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    // Determinar si se logeará un usuario o un administrador y evitar ejecucion de segue validando si se escribe un correo valido y una contrasenia
+    @IBAction func AdminOrUser(_ sender: Any) {
         
-        if identifier == "LogIn"{
+        if !switchBORRAR.isOn{
+            
+            //if identifier == "LogIn"{
             if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
-                
+                    
                 print("Valido") // Imprimir si el correo es valido
-                return true
+                self.performSegue(withIdentifier: "LogIn", sender: self)
                 
             } else {
                 
                 print("Invalido") // Imprimir si el correo NO es valido
-                return false
                 
             }
+            
         } else {
-            print("No abro")
-            return false
+            
+            //if identifier == "LogIn"{
+            if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
+            
+            self.performSegue(withIdentifier: "LogInAdmin", sender: self)
+            
+            } else {
+            
+                print("Invalido") // Imprimir si el correo NO es valido
+            
+            }
+            
         }
+        
     }
+    
+    
 }
 
