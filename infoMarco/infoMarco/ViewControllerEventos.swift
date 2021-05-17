@@ -9,7 +9,9 @@ import UIKit
 
 class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var sBorrar = ["Evento 1","Evento 2","Evento 3","Evento 4", "Evento 5"]
+    var listaEventos = [
+        Eventos(titulo: "Desayuna en el museo", descripcion: "Prueba nuestras deliciosos chilaquiles rojos y verdes", foto: UIImage(named: "chilaquiles"))
+    ]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,18 +25,24 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return sBorrar.count
+        return listaEventos.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventos")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventos") as! TableViewCellEventos
         
-        cell.textLabel?.text = sBorrar[indexPath.row]
+        cell.lbTitulo.text = listaEventos[indexPath.row].titulo
+        cell.lbContenido.text = listaEventos[indexPath.row].descripcion
+        cell.imgFoto.image = listaEventos[indexPath.row].foto
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
     }
 
     
@@ -46,7 +54,7 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
          let vistaReservaciones = segue.destination as!  ViewControllerReservacion
          let indice = tableView.indexPathForSelectedRow!
          
-         vistaReservaciones.evento = sBorrar[indice.row]
+        vistaReservaciones.evento = listaEventos[indice.row].descripcion
          
      
      }

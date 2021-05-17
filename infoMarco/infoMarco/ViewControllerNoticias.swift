@@ -10,7 +10,9 @@ import UIKit
 class ViewControllerNoticias: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
-    var sBorrar = ["Prueba"]
+    var listaNoticias = [
+        Noticia(titulo: "Conociendo a Van Gogh", descripcion: "Conoce mas sobre el artista holandes en su exhibicion temporal", foto: UIImage(named: "vangogh"))
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +23,26 @@ class ViewControllerNoticias: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return sBorrar.count
+        return listaNoticias.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaNoticias")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaNoticias")  as! TableViewCellNoticias
         
-        cell.textLabel?.text = sBorrar[indexPath.row]
+        cell.lbTitulo.text = listaNoticias[indexPath.row].titulo
+        cell.lbContenido.text = listaNoticias[indexPath.row].descripcion
+        cell.imgFoto.image = listaNoticias[indexPath.row].foto
         
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
+    }
+
 
     /*
     // MARK: - Navigation

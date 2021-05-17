@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5216A83D2652B69A00C0850C /* PromocionesyBeneficios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216A83C2652B69A00C0850C /* PromocionesyBeneficios.swift */; };
+		5216A8422652B96800C0850C /* TableViewCellPromocionesyBeneficios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216A8412652B96800C0850C /* TableViewCellPromocionesyBeneficios.swift */; };
+		5216A8472652C4C900C0850C /* Noticia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216A8462652C4C900C0850C /* Noticia.swift */; };
+		5216A84C2652C76C00C0850C /* TableViewCellNoticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216A84B2652C76C00C0850C /* TableViewCellNoticias.swift */; };
+		5216A8512652D72300C0850C /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216A8502652D72200C0850C /* Eventos.swift */; };
+		5216A8562652D7E500C0850C /* TableViewCellEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216A8552652D7E500C0850C /* TableViewCellEventos.swift */; };
 		526F9C752630CD7C005567ED /* ViewControllerPromoBeneficios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */; };
 		5A51EE4E2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */; };
 		5A51EE532650A9750051E11B /* ViewControllerAdminNoticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */; };
@@ -55,6 +61,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5216A83C2652B69A00C0850C /* PromocionesyBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PromocionesyBeneficios.swift; path = infoMarcoObjetos/PromocionesyBeneficios.swift; sourceTree = "<group>"; };
+		5216A8412652B96800C0850C /* TableViewCellPromocionesyBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPromocionesyBeneficios.swift; sourceTree = "<group>"; };
+		5216A8462652C4C900C0850C /* Noticia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticia.swift; sourceTree = "<group>"; };
+		5216A84B2652C76C00C0850C /* TableViewCellNoticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellNoticias.swift; sourceTree = "<group>"; };
+		5216A8502652D72200C0850C /* Eventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
+		5216A8552652D7E500C0850C /* TableViewCellEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellEventos.swift; sourceTree = "<group>"; };
 		526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPromoBeneficios.swift; sourceTree = "<group>"; };
 		5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarEvento.swift; sourceTree = "<group>"; };
 		5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminNoticias.swift; sourceTree = "<group>"; };
@@ -146,6 +158,12 @@
 				5A810A8A262E268300A26010 /* SceneDelegate.swift */,
 				5A810A8C262E268300A26010 /* ViewController.swift */,
 				5A810A8E262E268300A26010 /* Main.storyboard */,
+				5216A8552652D7E500C0850C /* TableViewCellEventos.swift */,
+				5216A8502652D72200C0850C /* Eventos.swift */,
+				5216A8462652C4C900C0850C /* Noticia.swift */,
+				5216A8412652B96800C0850C /* TableViewCellPromocionesyBeneficios.swift */,
+				5216A84B2652C76C00C0850C /* TableViewCellNoticias.swift */,
+				5216A83C2652B69A00C0850C /* PromocionesyBeneficios.swift */,
 				5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */,
 				5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */,
 				5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */,
@@ -318,7 +336,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5216A8512652D72300C0850C /* Eventos.swift in Sources */,
 				5A9F6144264B9F7A000FF861 /* ViewControllerNoticias.swift in Sources */,
+				5216A8472652C4C900C0850C /* Noticia.swift in Sources */,
 				5AEA4A6D2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift in Sources */,
 				941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */,
 				5A51EE5D2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift in Sources */,
@@ -333,12 +353,16 @@
 				5A8F3D79264CA46500D19AA5 /* ViewControllerConfig.swift in Sources */,
 				5AEA4A682651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift in Sources */,
 				5AA40AB02651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift in Sources */,
+				5216A8562652D7E500C0850C /* TableViewCellEventos.swift in Sources */,
 				5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */,
 				526F9C752630CD7C005567ED /* ViewControllerPromoBeneficios.swift in Sources */,
 				5AF79B0B26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift in Sources */,
 				5A810A89262E268300A26010 /* AppDelegate.swift in Sources */,
 				5A51EE582650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift in Sources */,
+				5216A8422652B96800C0850C /* TableViewCellPromocionesyBeneficios.swift in Sources */,
+				5216A84C2652C76C00C0850C /* TableViewCellNoticias.swift in Sources */,
 				5A51EE4E2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift in Sources */,
+				5216A83D2652B69A00C0850C /* PromocionesyBeneficios.swift in Sources */,
 				5A9F6149264BA03A000FF861 /* ViewControllerRenovacion.swift in Sources */,
 				5A810A8B262E268300A26010 /* SceneDelegate.swift in Sources */,
 			);
