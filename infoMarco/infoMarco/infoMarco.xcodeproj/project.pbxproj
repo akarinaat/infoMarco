@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,7 +20,6 @@
 		941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */; };
 		941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */; };
 		941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */; };
-		D58ED8FBA9E1D37A549C093E /* Pods_infoMarco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1320BB179EBBD127C4466693 /* Pods_infoMarco.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1320BB179EBBD127C4466693 /* Pods_infoMarco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_infoMarco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPromoBeneficios.swift; sourceTree = "<group>"; };
 		5A810A85262E268300A26010 /* infoMarco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infoMarco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A810A88262E268300A26010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 		941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInformacionPersonal.swift; sourceTree = "<group>"; };
 		941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLectorEventos.swift; sourceTree = "<group>"; };
 		941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQRScanner.swift; sourceTree = "<group>"; };
-		AFF122A7B713C18E81DB858C /* Pods-infoMarco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infoMarco.debug.xcconfig"; path = "Target Support Files/Pods-infoMarco/Pods-infoMarco.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D58ED8FBA9E1D37A549C093E /* Pods_infoMarco.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +93,6 @@
 				5A810A9E262E268400A26010 /* infoMarcoTests */,
 				5A810AA9262E268400A26010 /* infoMarcoUITests */,
 				5A810A86262E268300A26010 /* Products */,
-				8555028448811545C44FF968 /* Pods */,
-				BA0D44A652AFDA2F3C28CCC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,16 +109,12 @@
 		5A810A87262E268300A26010 /* infoMarco */ = {
 			isa = PBXGroup;
 			children = (
-				5AEA4A6C2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift */,
-				5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */,
-				5A51EE612650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift */,
 				5A810A88262E268300A26010 /* AppDelegate.swift */,
 				5A810A8A262E268300A26010 /* SceneDelegate.swift */,
 				5A810A8C262E268300A26010 /* ViewController.swift */,
 				5A810A8E262E268300A26010 /* Main.storyboard */,
 				941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */,
 				941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */,
-				5A8143CE2641E85C002463AA /* GoogleService-Info.plist */,
 				941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */,
 				5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */,
 				5A810A91262E268400A26010 /* Assets.xcassets */,
@@ -153,23 +143,6 @@
 			path = infoMarcoUITests;
 			sourceTree = "<group>";
 		};
-		8555028448811545C44FF968 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AFF122A7B713C18E81DB858C /* Pods-infoMarco.debug.xcconfig */,
-				7893CBCBDE35205DD116ABCB /* Pods-infoMarco.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		BA0D44A652AFDA2F3C28CCC7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1320BB179EBBD127C4466693 /* Pods_infoMarco.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,12 +150,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A810AAF262E268400A26010 /* Build configuration list for PBXNativeTarget "infoMarco" */;
 			buildPhases = (
-				2A802FBCB187098C58FFE1E4 /* [CP] Check Pods Manifest.lock */,
 				5A810A81262E268300A26010 /* Sources */,
 				5A810A82262E268300A26010 /* Frameworks */,
 				5A810A83262E268300A26010 /* Resources */,
-				24AE557E383552F177068A23 /* [CP] Embed Pods Frameworks */,
-				D221EC4F1B6F692542BB69EC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,7 +247,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A810A95262E268400A26010 /* LaunchScreen.storyboard in Resources */,
-				5A8143CF2641E85C002463AA /* GoogleService-Info.plist in Resources */,
 				5A810A92262E268400A26010 /* Assets.xcassets in Resources */,
 				5A810A90262E268300A26010 /* Main.storyboard in Resources */,
 			);
@@ -299,92 +268,19 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		24AE557E383552F177068A23 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-infoMarco/Pods-infoMarco-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-infoMarco/Pods-infoMarco-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-infoMarco/Pods-infoMarco-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2A802FBCB187098C58FFE1E4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-infoMarco-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D221EC4F1B6F692542BB69EC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-infoMarco/Pods-infoMarco-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-infoMarco/Pods-infoMarco-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-infoMarco/Pods-infoMarco-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		5A810A81262E268300A26010 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A9F6144264B9F7A000FF861 /* ViewControllerNoticias.swift in Sources */,
-				5AEA4A6D2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift in Sources */,
 				941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */,
 				941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */,
-				5A51EE622650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift in Sources */,
 				5A810A8D262E268300A26010 /* ViewController.swift in Sources */,
-				5A51EE532650A9750051E11B /* ViewControllerAdminNoticias.swift in Sources */,
-				5ABA96B126504495004A4D55 /* ViewControllerMembresias.swift in Sources */,
-				5A9F614E264BA1B1000FF861 /* ViewControllerReservacion.swift in Sources */,
 				941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */,
-				5A8F3D79264CA46500D19AA5 /* ViewControllerConfig.swift in Sources */,
-				5AEA4A682651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift in Sources */,
-				5AA40AB02651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift in Sources */,
 				5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */,
 				526F9C752630CD7C005567ED /* ViewControllerPromoBeneficios.swift in Sources */,
-				5AF79B0B26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift in Sources */,
 				5A810A89262E268300A26010 /* AppDelegate.swift in Sources */,
-				5A51EE582650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift in Sources */,
-				5A51EE4E2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift in Sources */,
-				5A9F6149264BA03A000FF861 /* ViewControllerRenovacion.swift in Sources */,
 				5A810A8B262E268300A26010 /* SceneDelegate.swift in Sources */,
-				5A92B16D264CD3FA00B42ECB /* ViewControllerPopOverRegister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +453,6 @@
 		};
 		5A810AB0262E268400A26010 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFF122A7B713C18E81DB858C /* Pods-infoMarco.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -577,7 +472,6 @@
 		};
 		5A810AB1262E268400A26010 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7893CBCBDE35205DD116ABCB /* Pods-infoMarco.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
