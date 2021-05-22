@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import Firebase
-
 
 class ViewController: UIViewController {
     
@@ -19,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     // Funcion para validar que los tf tengan datos y que el tf de correo tenga el formato correcto
     func validarCorreoContra(email : String, contra : String) -> Bool {
         
@@ -96,7 +94,6 @@ class ViewController: UIViewController {
         
     }
     
-
+    
 }
 
- 
