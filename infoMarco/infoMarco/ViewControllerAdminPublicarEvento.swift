@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewControllerAdminPublicarEvento: UIViewController {
 
+    let database = Database.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +24,14 @@ class ViewControllerAdminPublicarEvento: UIViewController {
         
     }
     
+    @IBAction func publicarButton(_ sender: UIButton) {
+        let object: [String: Any] = [ "nombre": "Vida de Frida Kahlo",
+                                      "descripcion": "La emocionante vida de esta mujer"
+        ]
+        database.child("Evento 1").setValue(object)
+        
+        
+    }
     // LA VISTA NO ES MODAL, NO ES NECESARIO UN UNWIND
     // Aunque puedo equivocarme, sería revoltoso visualmente hablando
     

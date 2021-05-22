@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
+    
+//    var ref: DatabaseReference!
+//
+//    ref = Database.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
