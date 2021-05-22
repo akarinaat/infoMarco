@@ -1,0 +1,6 @@
+framework module Pods_infoMarco {
+  umbrella header "Pods-infoMarco-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -13,6 +13,7 @@
 		5A51EE582650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */; };
 		5A51EE5D2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */; };
 		5A51EE622650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE612650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift */; };
+		5A7FD96E26596C7500220CB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A7FD96D26596C7500220CB7 /* GoogleService-Info.plist */; };
 		5A810A89262E268300A26010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A88262E268300A26010 /* AppDelegate.swift */; };
 		5A810A8B262E268300A26010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A8A262E268300A26010 /* SceneDelegate.swift */; };
 		5A810A8D262E268300A26010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A8C262E268300A26010 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 		941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */; };
 		941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */; };
 		941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */; };
+		D1E6D997F0999EAF5BCDF4EF /* Pods_infoMarco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A8086BF7A7C393B9EE074F /* Pods_infoMarco.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E20F927414B67D9CC1E44BD /* Pods-infoMarco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infoMarco.debug.xcconfig"; path = "Target Support Files/Pods-infoMarco/Pods-infoMarco.debug.xcconfig"; sourceTree = "<group>"; };
 		526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPromoBeneficios.swift; sourceTree = "<group>"; };
 		5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarEvento.swift; sourceTree = "<group>"; };
 		5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminNoticias.swift; sourceTree = "<group>"; };
 		5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminNoticiasDetalle.swift; sourceTree = "<group>"; };
 		5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPromoBeneficios.swift; sourceTree = "<group>"; };
 		5A51EE612650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPromosBeneficiosDetalle.swift; sourceTree = "<group>"; };
+		5A7FD96D26596C7500220CB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A810A85262E268300A26010 /* infoMarco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infoMarco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A810A88262E268300A26010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A810A8A262E268300A26010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,9 +90,11 @@
 		5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarNoticia.swift; sourceTree = "<group>"; };
 		5AEA4A6C2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarPromoBeneficio.swift; sourceTree = "<group>"; };
 		5AF79B0A26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminEventosDetalle.swift; sourceTree = "<group>"; };
+		67430643DC19ED8F4B522CEE /* Pods-infoMarco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infoMarco.release.xcconfig"; path = "Target Support Files/Pods-infoMarco/Pods-infoMarco.release.xcconfig"; sourceTree = "<group>"; };
 		941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInformacionPersonal.swift; sourceTree = "<group>"; };
 		941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLectorEventos.swift; sourceTree = "<group>"; };
 		941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQRScanner.swift; sourceTree = "<group>"; };
+		C1A8086BF7A7C393B9EE074F /* Pods_infoMarco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_infoMarco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E6D997F0999EAF5BCDF4EF /* Pods_infoMarco.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +123,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09717F4275AA3B026FE1FF5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E20F927414B67D9CC1E44BD /* Pods-infoMarco.debug.xcconfig */,
+				67430643DC19ED8F4B522CEE /* Pods-infoMarco.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5A810A7C262E268300A26010 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +140,8 @@
 				5A810A9E262E268400A26010 /* infoMarcoTests */,
 				5A810AA9262E268400A26010 /* infoMarcoUITests */,
 				5A810A86262E268300A26010 /* Products */,
+				09717F4275AA3B026FE1FF5C /* Pods */,
+				E458B6A0F959899862B8CBED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +158,7 @@
 		5A810A87262E268300A26010 /* infoMarco */ = {
 			isa = PBXGroup;
 			children = (
+				5A7FD96D26596C7500220CB7 /* GoogleService-Info.plist */,
 				5AEA4A6C2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift */,
 				5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */,
 				5A51EE612650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift */,
@@ -188,6 +208,14 @@
 			path = infoMarcoUITests;
 			sourceTree = "<group>";
 		};
+		E458B6A0F959899862B8CBED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1A8086BF7A7C393B9EE074F /* Pods_infoMarco.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A810AAF262E268400A26010 /* Build configuration list for PBXNativeTarget "infoMarco" */;
 			buildPhases = (
+				F8172995EA7D195E3E5DA79A /* [CP] Check Pods Manifest.lock */,
 				5A810A81262E268300A26010 /* Sources */,
 				5A810A82262E268300A26010 /* Frameworks */,
 				5A810A83262E268300A26010 /* Resources */,
+				220A58FA6EE0291811FF335B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A810A95262E268400A26010 /* LaunchScreen.storyboard in Resources */,
+				5A7FD96E26596C7500220CB7 /* GoogleService-Info.plist in Resources */,
 				5A810A92262E268400A26010 /* Assets.xcassets in Resources */,
 				5A810A90262E268300A26010 /* Main.storyboard in Resources */,
 			);
@@ -312,6 +343,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		220A58FA6EE0291811FF335B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-infoMarco/Pods-infoMarco-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-infoMarco/Pods-infoMarco-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-infoMarco/Pods-infoMarco-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8172995EA7D195E3E5DA79A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-infoMarco-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A810A81262E268300A26010 /* Sources */ = {
@@ -513,6 +586,7 @@
 		};
 		5A810AB0262E268400A26010 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E20F927414B67D9CC1E44BD /* Pods-infoMarco.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -532,6 +606,7 @@
 		};
 		5A810AB1262E268400A26010 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67430643DC19ED8F4B522CEE /* Pods-infoMarco.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
