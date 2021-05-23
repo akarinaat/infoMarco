@@ -1,29 +1,33 @@
 //
-//  ViewControllerPromoBeneficios.swift
+//  ViewControllerAdminNoticias.swift
 //  infoMarco
 //
-//  Created by Luis Mario Trujillo on 21/04/21.
+//  Created by user188713 on 5/15/21.
 //
 
 import UIKit
 
-class ViewControllerPromoBeneficios: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewControllerAdminNoticias:  UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var sBorrar = ["Prueba"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
+        // Do any additional setup after loading the view.
     }
     
+    // MARK: Metodos del Data Source
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        return sBorrar.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaNoticias")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaNoticiasAdmin")!
         
         cell.textLabel?.text = sBorrar[indexPath.row]
         
