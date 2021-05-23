@@ -36,9 +36,9 @@
 		941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */; };
 		941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */; };
 		941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */; };
+		C385F907265A298700D92CFB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C385F906265A292400D92CFB /* CustomTableViewCell.swift */; };
 		C399097E265A20D8001A8166 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C399097D265A20D8001A8166 /* CustomTableViewCell.swift */; };
 		C39B38942659CBDE0088E0B1 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B38932659CBDE0088E0B1 /* Evento.swift */; };
-		C39B38962659CC2B0088E0B1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B38952659CC2B0088E0B1 /* CustomTableViewCell.swift */; };
 		D1E6D997F0999EAF5BCDF4EF /* Pods_infoMarco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A8086BF7A7C393B9EE074F /* Pods_infoMarco.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +98,7 @@
 		941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLectorEventos.swift; sourceTree = "<group>"; };
 		941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQRScanner.swift; sourceTree = "<group>"; };
 		C1A8086BF7A7C393B9EE074F /* Pods_infoMarco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_infoMarco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C385F906265A292400D92CFB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C399097D265A20D8001A8166 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C39B38932659CBDE0088E0B1 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		C39B38952659CC2B0088E0B1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 		5A810A87262E268300A26010 /* infoMarco */ = {
 			isa = PBXGroup;
 			children = (
+				C385F906265A292400D92CFB /* CustomTableViewCell.swift */,
 				5A7FD96D26596C7500220CB7 /* GoogleService-Info.plist */,
 				5AEA4A6C2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift */,
 				5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */,
@@ -407,19 +409,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C399097E265A20D8001A8166 /* CustomTableViewCell.swift in Sources */,
 				C39B38942659CBDE0088E0B1 /* Evento.swift in Sources */,
 				5A9F6144264B9F7A000FF861 /* ViewControllerNoticias.swift in Sources */,
 				5AEA4A6D2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift in Sources */,
 				941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */,
 				5A51EE5D2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift in Sources */,
 				5ACFAE1E26506B7600AA5CF8 /* ViewControllerAdminEventos.swift in Sources */,
-				C39B38962659CC2B0088E0B1 /* CustomTableViewCell.swift in Sources */,
 				941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */,
 				5A51EE622650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift in Sources */,
 				5A810A8D262E268300A26010 /* ViewController.swift in Sources */,
 				5A51EE532650A9750051E11B /* ViewControllerAdminNoticias.swift in Sources */,
 				5ABA96B126504495004A4D55 /* ViewControllerMembresias.swift in Sources */,
-				C399097E265A20D8001A8166 /* CustomTableViewCell.swift in Sources */,
+				C385F907265A298700D92CFB /* CustomTableViewCell.swift in Sources */,
 				5A9F614E264BA1B1000FF861 /* ViewControllerReservacion.swift in Sources */,
 				941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */,
 				5A8F3D79264CA46500D19AA5 /* ViewControllerConfig.swift in Sources */,

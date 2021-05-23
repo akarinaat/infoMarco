@@ -948,7 +948,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="Publicar"/>
                                 <connections>
-                                    <action selector="publicarButton:" destination="JRS-ET-sch" eventType="touchUpInside" id="7dC-QH-dEq"/>
+                                    <action selector="botonPublicar:" destination="JRS-ET-sch" eventType="touchUpInside" id="nOX-YA-igZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvx-vW-a3p">

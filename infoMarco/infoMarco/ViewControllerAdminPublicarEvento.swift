@@ -56,11 +56,8 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         let evento = Evento(iD: "marcoEvent"+String(counterEvent), titulo: tfTitulo.text!, contenido: tvContenido.text!, imagen: imgFoto.image!)
         delegado.agregarEvento(ev: evento)
         dismiss(animated: true, completion: nil)
-      
-      let object: [String: Any] = [ "nombre": "Vida de Frida Kahlo",
-                                      "descripcion": "La emocionante vida de esta mujer"
-        ]
-        database.child("Evento 1").setValue(object)
+        let object: [String: Any] = [ "nombre": "arreglo de errores merge", "descripcion": "esto debe subirse a la base de datos"]
+        database.child("Evento 4").setValue(object)
         
     }
     
