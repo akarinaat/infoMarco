@@ -12,6 +12,7 @@ class ViewControllerLectorEventos: UIViewController {
     @IBOutlet weak var tfQRCode: UITextField!
     
     var qrCodeString: String!
+    var nombreEvento = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
