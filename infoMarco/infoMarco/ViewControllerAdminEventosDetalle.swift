@@ -7,26 +7,13 @@
 
 import UIKit
 
-protocol protocoloActualizasEvento {
-    func actualizaEvento (ev : Evento)
-}
-
-class ViewControllerAdminEventosDetalle: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    var unEvento : Evento!
-    var delegado : protocoloActualizasEvento!
-
-    @IBOutlet weak var lbTitulo: UITextField!
-    @IBOutlet weak var tvEvento: UITextView!
-    @IBOutlet weak var imgEvento: UIImageView!
+class ViewControllerAdminEventosDetalle: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Editar Evento"
-        imgEvento.image = unEvento.imagen
-        lbTitulo.text = unEvento.titulo
-        tvEvento.text = unEvento.contenido    }
+        // Do any additional setup after loading the view.
+    }
     
     // Funcionalidad de botón regresar
     @IBAction func regresar(_ sender: Any) {
@@ -35,51 +22,14 @@ class ViewControllerAdminEventosDetalle: UIViewController, UIImagePickerControll
         
     }
 
-    @IBAction func botonGuardar(_ sender: UIButton) {
-
-            unEvento.titulo = lbTitulo.text!
-            unEvento.contenido = tvEvento.text!
-            unEvento.imagen = imgEvento.image!
-            delegado.actualizaEvento(ev: unEvento)
-            self.dismiss(animated: true, completion: nil)
-
-        }
-    
-    @IBAction func cambiarFotoEvento(_ sender: UITapGestureRecognizer) {
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-
-        present(imagePicker, animated: true, completion: nil)
-
-    }
-    
-    
+    /*
     // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "lectorQR" {
-            let vistaEditar = segue.destination as! ViewControllerLectorEventos
-            vistaEditar.nombreEvento = lbTitulo.text!
-
-        }
-
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
-    //MARK: - Métodos de delegado de UIImage Picker Controller
-            
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        let foto = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        imgEvento.image = foto
-        dismiss(animated: true, completion: nil)
-
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            dismiss(animated: true, completion: nil)
-        }
+    */
 
 }

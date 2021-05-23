@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
 class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
     

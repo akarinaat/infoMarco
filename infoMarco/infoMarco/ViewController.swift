@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -63,13 +64,34 @@ class ViewController: UIViewController {
     // Determinar si se logeará un usuario o un administrador y evitar ejecucion de segue validando si se escribe un correo valido y una contrasenia
     @IBAction func AdminOrUser(_ sender: Any) {
         
+        let correo = tfEmail.text!
+        let contras = tfContrasena.text!
+        
         if !switchBORRAR.isOn{
             
             //if identifier == "LogIn"{
-            if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
+            if validarCorreoContra(email: correo, contra: contras){
                     
                 print("Valido") // Imprimir si el correo es valido
-                self.performSegue(withIdentifier: "LogIn", sender: self)
+                
+                Auth.auth().signIn(withEmail: correo, password: contras) {
+                    (result, error) in
+                    
+                    if let result = result, error == nil {
+                        
+                        self.performSegue(withIdentifier: "LogIn", sender: self)
+                        
+                    } else {
+                        
+                        // Crear y desplegar alerta
+                        let alerta = UIAlertController(title: "ERROR", message: "Correo inexistente o contraseña incorrecta", preferredStyle: .alert)
+                        let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        
+                        alerta.addAction(accion)
+                        self.present(alerta, animated: true, completion: nil)
+                        
+                    }
+                }
                 
             } else {
                 
