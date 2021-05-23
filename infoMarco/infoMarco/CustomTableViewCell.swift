@@ -2,7 +2,7 @@
 //  CustomTableViewCell.swift
 //  infoMarco
 //
-//  Created by Gerardo Ángeles Hernández on 17/05/21.
+//  Created by Gerardo Ángeles Hernández on 23/05/21.
 //
 
 import UIKit
@@ -13,8 +13,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var tvContenido: UITextView!
     @IBOutlet weak var imgEvento: UIImageView!
     @IBOutlet weak var lbCodigo: UILabel!
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

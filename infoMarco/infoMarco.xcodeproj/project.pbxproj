@@ -36,6 +36,7 @@
 		941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */; };
 		941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */; };
 		941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */; };
+		C399097E265A20D8001A8166 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C399097D265A20D8001A8166 /* CustomTableViewCell.swift */; };
 		C39B38942659CBDE0088E0B1 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B38932659CBDE0088E0B1 /* Evento.swift */; };
 		C39B38962659CC2B0088E0B1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B38952659CC2B0088E0B1 /* CustomTableViewCell.swift */; };
 		D1E6D997F0999EAF5BCDF4EF /* Pods_infoMarco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A8086BF7A7C393B9EE074F /* Pods_infoMarco.framework */; };
@@ -97,6 +98,7 @@
 		941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLectorEventos.swift; sourceTree = "<group>"; };
 		941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQRScanner.swift; sourceTree = "<group>"; };
 		C1A8086BF7A7C393B9EE074F /* Pods_infoMarco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_infoMarco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C399097D265A20D8001A8166 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C39B38932659CBDE0088E0B1 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		C39B38952659CC2B0088E0B1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 				5A810A86262E268300A26010 /* Products */,
 				09717F4275AA3B026FE1FF5C /* Pods */,
 				E458B6A0F959899862B8CBED /* Frameworks */,
+				C399097C265A2095001A8166 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,8 +172,7 @@
 				5A810A8A262E268300A26010 /* SceneDelegate.swift */,
 				5A810A8C262E268300A26010 /* ViewController.swift */,
 				5A810A8E262E268300A26010 /* Main.storyboard */,
-				C340A1792652B589005623CF /* CustomTableViewCell.swift */,
-				C340A1772652AD1E005623CF /* Evento.swift */,
+				C399097D265A20D8001A8166 /* CustomTableViewCell.swift */,
 				5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */,
 				5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */,
 				5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */,
@@ -212,6 +214,14 @@
 				5A810AAC262E268400A26010 /* Info.plist */,
 			);
 			path = infoMarcoUITests;
+			sourceTree = "<group>";
+		};
+		C399097C265A2095001A8166 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				C39B38952659CC2B0088E0B1 /* CustomTableViewCell.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		E458B6A0F959899862B8CBED /* Frameworks */ = {
@@ -409,6 +419,7 @@
 				5A810A8D262E268300A26010 /* ViewController.swift in Sources */,
 				5A51EE532650A9750051E11B /* ViewControllerAdminNoticias.swift in Sources */,
 				5ABA96B126504495004A4D55 /* ViewControllerMembresias.swift in Sources */,
+				C399097E265A20D8001A8166 /* CustomTableViewCell.swift in Sources */,
 				5A9F614E264BA1B1000FF861 /* ViewControllerReservacion.swift in Sources */,
 				941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */,
 				5A8F3D79264CA46500D19AA5 /* ViewControllerConfig.swift in Sources */,
@@ -608,7 +619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Tec.demoProtocolos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -628,7 +639,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Tec.demoProtocolos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
