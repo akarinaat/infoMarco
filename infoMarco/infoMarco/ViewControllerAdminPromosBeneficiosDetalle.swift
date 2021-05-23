@@ -8,6 +8,10 @@
 import UIKit
 
 class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
+    
+//    var ref: DatabaseReference!
+//
+//    ref = Database.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()

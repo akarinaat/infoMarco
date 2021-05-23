@@ -15,7 +15,6 @@ class ViewControllerLectorEventos: UIViewController {
     var qrCodeString: String!
     var nombreEvento = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         lbEventoName.text = nombreEvento

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 protocol protocoloAgregaEvento {
     func agregarEvento (ev: Evento)
@@ -19,6 +20,8 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
     
     var delegado : protocoloAgregaEvento!
     var counterEvent = 0
+  
+    let database = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +56,11 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         let evento = Evento(iD: "marcoEvent"+String(counterEvent), titulo: tfTitulo.text!, contenido: tvContenido.text!, imagen: imgFoto.image!)
         delegado.agregarEvento(ev: evento)
         dismiss(animated: true, completion: nil)
+      
+      let object: [String: Any] = [ "nombre": "Vida de Frida Kahlo",
+                                      "descripcion": "La emocionante vida de esta mujer"
+        ]
+        database.child("Evento 1").setValue(object)
         
     }
     
