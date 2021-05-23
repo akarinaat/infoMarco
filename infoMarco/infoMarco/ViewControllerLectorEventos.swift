@@ -14,6 +14,7 @@ class ViewControllerLectorEventos: UIViewController {
     
     var qrCodeString: String!
     var nombreEvento = ""
+    var cambioparamerge = ""
     
     
     override func viewDidLoad() {
