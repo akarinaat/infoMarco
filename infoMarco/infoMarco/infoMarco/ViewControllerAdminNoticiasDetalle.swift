@@ -1,5 +1,5 @@
 //
-//  ViewControllerAdminPromosBeneficiosDetalle.swift
+//  ViewControllerAdminNoticiasDetalle.swift
 //  infoMarco
 //
 //  Created by user188713 on 5/15/21.
@@ -7,11 +7,7 @@
 
 import UIKit
 
-class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
-    
-//    var ref: DatabaseReference!
-//
-//    ref = Database.database().reference()
+class ViewControllerAdminNoticiasDetalle: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

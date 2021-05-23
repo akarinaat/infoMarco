@@ -1,28 +1,25 @@
 //
-//  ViewControllerAdminPromosBeneficiosDetalle.swift
+//  ViewControllerConfirmacionReservacion.swift
 //  infoMarco
 //
-//  Created by user188713 on 5/15/21.
+//  Created by Karina Amador Teran on 16/05/21.
 //
 
 import UIKit
 
-class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
-    
-//    var ref: DatabaseReference!
-//
-//    ref = Database.database().reference()
+class ViewControllerConfirmacionReservacion: UIViewController {
 
+    var boletos: String!
+    var nombreEvento: String!
+    
+    @IBOutlet weak var lbNoBletos: UILabel!
+    @IBOutlet weak var lbNombreEvento: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        lbNoBletos.text = boletos
+        lbNombreEvento.text = nombreEvento
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func regresar(_ sender: Any) {
-        
-        self.dismiss(animated: true, completion: nil)
-        
     }
 
     /*

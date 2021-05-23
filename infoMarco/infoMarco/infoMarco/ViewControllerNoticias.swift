@@ -1,24 +1,28 @@
 //
-//  ViewControllerPromoBeneficios.swift
+//  ViewControllerNoticias.swift
 //  infoMarco
 //
-//  Created by Luis Mario Trujillo on 21/04/21.
+//  Created by user188713 on 5/11/21.
 //
 
 import UIKit
 
-class ViewControllerPromoBeneficios: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewControllerNoticias: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
     var sBorrar = ["Prueba"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
     }
     
+    // MARK: Metodos del Data Source
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        return sBorrar.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

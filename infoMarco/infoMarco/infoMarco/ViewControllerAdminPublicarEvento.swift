@@ -1,5 +1,5 @@
 //
-//  ViewControllerAdminPromosBeneficiosDetalle.swift
+//  ViewControllerAdminPublicarEvento.swift
 //  infoMarco
 //
 //  Created by user188713 on 5/15/21.
@@ -7,11 +7,7 @@
 
 import UIKit
 
-class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
-    
-//    var ref: DatabaseReference!
-//
-//    ref = Database.database().reference()
+class ViewControllerAdminPublicarEvento: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +17,13 @@ class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
     
     @IBAction func regresar(_ sender: Any) {
         
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
         
     }
-
+    
+    // LA VISTA NO ES MODAL, NO ES NECESARIO UN UNWIND
+    // Aunque puedo equivocarme, sería revoltoso visualmente hablando
+    
     /*
     // MARK: - Navigation
 

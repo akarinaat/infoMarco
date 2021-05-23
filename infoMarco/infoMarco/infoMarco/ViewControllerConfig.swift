@@ -1,17 +1,13 @@
 //
-//  ViewControllerAdminPromosBeneficiosDetalle.swift
+//  ViewControllerConfig.swift
 //  infoMarco
 //
-//  Created by user188713 on 5/15/21.
+//  Created by user188713 on 5/12/21.
 //
 
 import UIKit
 
-class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
-    
-//    var ref: DatabaseReference!
-//
-//    ref = Database.database().reference()
+class ViewControllerConfig: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +15,6 @@ class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func regresar(_ sender: Any) {
-        
-        self.dismiss(animated: true, completion: nil)
-        
-    }
 
     /*
     // MARK: - Navigation

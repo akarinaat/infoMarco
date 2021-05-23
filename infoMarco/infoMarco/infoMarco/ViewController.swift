@@ -11,7 +11,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfContrasena: UITextField!
-
+    @IBOutlet weak var switchBORRAR: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
             
             return false
             
-        } else { // Verificar formato del correo escrito
+        } else { // Verificar formato del correo escrito usando Regex
         
             let emailREx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-}]+\\.[A-Za-z]{2,64}"
             
@@ -59,28 +60,40 @@ class ViewController: UIViewController {
     
     // MARK: - Navigation
     
-    // Evitar ejecucion de segue validando si se escribe un correo valido y una contrasenia
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    // Determinar si se logeará un usuario o un administrador y evitar ejecucion de segue validando si se escribe un correo valido y una contrasenia
+    @IBAction func AdminOrUser(_ sender: Any) {
         
-        if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
+        if !switchBORRAR.isOn{
             
-            print("Valido")
-            return true
+            //if identifier == "LogIn"{
+            if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
+                    
+                print("Valido") // Imprimir si el correo es valido
+                self.performSegue(withIdentifier: "LogIn", sender: self)
+                
+            } else {
+                
+                print("Invalido") // Imprimir si el correo NO es valido
+                
+            }
             
         } else {
             
-            print("Invalido")
-            return false
+            //if identifier == "LogIn"{
+            if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
+            
+            self.performSegue(withIdentifier: "LogInAdmin", sender: self)
+            
+            } else {
+            
+                print("Invalido") // Imprimir si el correo NO es valido
+            
+            }
             
         }
+        
     }
-
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                
-    }*/
     
-
-
+    
 }
 

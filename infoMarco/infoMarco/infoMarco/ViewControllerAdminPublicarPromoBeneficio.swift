@@ -1,17 +1,13 @@
 //
-//  ViewControllerAdminPromosBeneficiosDetalle.swift
+//  ViewControllerAdminPublicarPromoBeneficio.swift
 //  infoMarco
 //
-//  Created by user188713 on 5/15/21.
+//  Created by user188713 on 5/16/21.
 //
 
 import UIKit
 
-class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
-    
-//    var ref: DatabaseReference!
-//
-//    ref = Database.database().reference()
+class ViewControllerAdminPublicarPromoBeneficio: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +17,7 @@ class ViewControllerAdminPromosBeneficiosDetalle: UIViewController {
     
     @IBAction func regresar(_ sender: Any) {
         
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
         
     }
 

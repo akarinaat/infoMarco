@@ -10,17 +10,14 @@ import UIKit
 class ViewControllerLectorEventos: UIViewController {
     
     @IBOutlet weak var tfQRCode: UITextField!
-    @IBOutlet weak var lbEventoName: UILabel!
     
     var qrCodeString: String!
     var nombreEvento = ""
-    var cambioparamerge = ""
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        lbEventoName.text = nombreEvento
+        // Do any additional setup after loading the view.
     }
     
     @IBAction func unwindToLectorEventosScreen(segue: UIStoryboardSegue){
