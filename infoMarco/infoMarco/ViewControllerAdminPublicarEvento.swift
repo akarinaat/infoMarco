@@ -57,10 +57,8 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         delegado.agregarEvento(ev: evento)
         dismiss(animated: true, completion: nil)
         
-        let object: [String: Any] = [ "nombre": "Vida de Frida Kahlo",
-                                      "descripcion": "La emocionante vida de esta mujer"
-        ]
-        database.child("Evento 1").setValue(object)
+        let object: [String: Any] = [ "nombre": "Prueba Ger","descripcion": "ger es el mejor del mundo"]
+        database.child("Evento 3").setValue(object)
 
     }
     
