@@ -229,6 +229,9 @@ PODS:
   - Firebase/Firestore (6.34.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 1.19.0)
+  - Firebase/Storage (6.34.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 3.9.1)
   - FirebaseAuth (6.9.2):
     - FirebaseCore (~> 6.10)
     - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
@@ -258,6 +261,9 @@ PODS:
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 1.30906.0)
+  - FirebaseStorage (3.9.1):
+    - FirebaseCore (~> 6.10)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleDataTransport (7.5.1):
     - nanopb (~> 1.30906.0)
   - GoogleUtilities/AppDelegateSwizzler (6.7.2):
@@ -300,6 +306,7 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.5.0)
+  - Kingfisher (4.10.1)
   - leveldb-library (1.22.1)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
@@ -312,6 +319,8 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Firestore
+  - Firebase/Storage
+  - Kingfisher
 
 SPEC REPOS:
   trunk:
@@ -323,11 +332,13 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseDatabase
     - FirebaseFirestore
+    - FirebaseStorage
     - GoogleDataTransport
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - Kingfisher
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -341,15 +352,17 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 770ac5958e1372ce67959ae4b4f31d8e127c3ac1
   FirebaseDatabase: 13a865a4b85897462b930eb683bda8f52583713f
   FirebaseFirestore: 9b2f1b9b9a6f2f0b6fb7484b9e32ab7e39243554
+  FirebaseStorage: 15e0f15ef3c7fec3d1899d68623e47d4447066b4
   GoogleDataTransport: f56af7caa4ed338dc8e138a5d7c5973e66440833
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 004551127799d7af8cea1dbb27112e6d7e8b75db
+PODFILE CHECKSUM: 3070fc8828c94c1a83858d7571e32cc83d64e7dc
 
 COCOAPODS: 1.10.1
