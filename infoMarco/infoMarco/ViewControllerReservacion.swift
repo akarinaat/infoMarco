@@ -36,5 +36,11 @@ class ViewControllerReservacion: UIViewController {
         vistaConformacionReservacion.nombreEvento = lbEventoTitulo.text
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask { return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+            return false
+    }
+    
 
 }

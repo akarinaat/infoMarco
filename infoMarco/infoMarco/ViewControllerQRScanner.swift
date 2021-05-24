@@ -102,4 +102,10 @@ class ViewControllerQRScanner: UIViewController, AVCaptureMetadataOutputObjectsD
         
     }
 
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask { return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool {
+            return false
+    }
 }
