@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		526F9C752630CD7C005567ED /* ViewControllerPromoBeneficios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */; };
+		5A3980FB265B4F0100C7F495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3980FA265B4F0100C7F495 /* Assets.xcassets */; };
 		5A51EE4E2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */; };
 		5A51EE532650A9750051E11B /* ViewControllerAdminNoticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */; };
 		5A51EE582650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */; };
@@ -18,7 +19,6 @@
 		5A810A8B262E268300A26010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A8A262E268300A26010 /* SceneDelegate.swift */; };
 		5A810A8D262E268300A26010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A8C262E268300A26010 /* ViewController.swift */; };
 		5A810A90262E268300A26010 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A810A8E262E268300A26010 /* Main.storyboard */; };
-		5A810A92262E268400A26010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A810A91262E268400A26010 /* Assets.xcassets */; };
 		5A810A95262E268400A26010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A810A93262E268400A26010 /* LaunchScreen.storyboard */; };
 		5A810AA0262E268400A26010 /* infoMarcoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A9F262E268400A26010 /* infoMarcoTests.swift */; };
 		5A810AAB262E268400A26010 /* infoMarcoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810AAA262E268400A26010 /* infoMarcoUITests.swift */; };
@@ -62,6 +62,7 @@
 /* Begin PBXFileReference section */
 		2E20F927414B67D9CC1E44BD /* Pods-infoMarco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infoMarco.debug.xcconfig"; path = "Target Support Files/Pods-infoMarco/Pods-infoMarco.debug.xcconfig"; sourceTree = "<group>"; };
 		526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPromoBeneficios.swift; sourceTree = "<group>"; };
+		5A3980FA265B4F0100C7F495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../AppIcons (1)/Assets.xcassets"; sourceTree = "<group>"; };
 		5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarEvento.swift; sourceTree = "<group>"; };
 		5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminNoticias.swift; sourceTree = "<group>"; };
 		5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminNoticiasDetalle.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		5A810A8A262E268300A26010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5A810A8C262E268300A26010 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A810A8F262E268300A26010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5A810A91262E268400A26010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A810A94262E268400A26010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A810A96262E268400A26010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A810A9B262E268400A26010 /* infoMarcoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = infoMarcoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +179,7 @@
 				5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */,
 				5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */,
 				5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */,
+				5A3980FA265B4F0100C7F495 /* Assets.xcassets */,
 				5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */,
 				5AF79B0A26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift */,
 				5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */,
@@ -192,7 +193,6 @@
 				941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */,
 				941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */,
 				5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */,
-				5A810A91262E268400A26010 /* Assets.xcassets */,
 				5A810A93262E268400A26010 /* LaunchScreen.storyboard */,
 				5A810A96262E268400A26010 /* Info.plist */,
 				526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */,
@@ -341,8 +341,8 @@
 			files = (
 				5A810A95262E268400A26010 /* LaunchScreen.storyboard in Resources */,
 				5A7FD96E26596C7500220CB7 /* GoogleService-Info.plist in Resources */,
-				5A810A92262E268400A26010 /* Assets.xcassets in Resources */,
 				5A810A90262E268300A26010 /* Main.storyboard in Resources */,
+				5A3980FB265B4F0100C7F495 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
