@@ -7,6 +7,8 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseStorage
+import FirebaseFirestore
 
 protocol protocoloAgregaEvento {
     func agregarEvento (ev: Evento)
@@ -53,6 +55,18 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
     
     @IBAction func botonPublicar(_ sender: UIButton) {
         
+        guard let image = imgFoto.image, let data = image.jpegData(compressionQuality: 1.0) else {
+            print("error al pasar info de foto")
+            return
+        }
+        
+        let imageName = UUID().uuidString
+        
+        //let imageReference =
+        
+        if let titulo = tfTitulo.text, let contenido = tvContenido.text, let imagen = imgFoto.image {
+            let object: [String: Any] = ["eventoID": "marcoEvent"+String(counterEvent), "titulo": title, "contenido": contenido, "imagen":imagen]
+        }
         let evento = Evento(iD: "marcoEvent"+String(counterEvent), titulo: tfTitulo.text!, contenido: tvContenido.text!, imagen: imgFoto.image!)
         delegado.agregarEvento(ev: evento)
         dismiss(animated: true, completion: nil)
