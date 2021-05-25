@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var sBorrar = ["Evento 1","Evento 2","Evento 3","Evento 4", "Evento 5"]
+    var ref: DatabaseReference?
+    var databaseHandle: DatabaseHandle?
+    var arrEventos = [String]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,13 +20,30 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        ref = Database.database().reference()
+        
+//        retrieve posts
+        
+        databaseHandle = ref?.child("marcoEvent2").observe(.childAdded, with: { (snapshot) in
+//            convierto el vaor de los datos en un string
+            let post = snapshot.value as? String
+            if let actualPost = post{
+                self.arrEventos.append(actualPost)
+                
+                self.tableView.reloadData()
+            }
+            
+            
+            
+        })
     }
     
     // MARK: Metodos del Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return sBorrar.count
+        return arrEventos.count
         
     }
     
@@ -31,7 +51,7 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventos")!
         
-        cell.textLabel?.text = sBorrar[indexPath.row]
+        cell.textLabel?.text = arrEventos[indexPath.row]
         
         return cell
         
@@ -46,7 +66,7 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
          let vistaReservaciones = segue.destination as!  ViewControllerReservacion
          let indice = tableView.indexPathForSelectedRow!
          
-         vistaReservaciones.evento = sBorrar[indice.row]
+         vistaReservaciones.evento = arrEventos[indice.row]
          
      
      }
