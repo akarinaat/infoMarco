@@ -71,17 +71,16 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
         return cell
         
     }
-    // MARK: - Navigatio
- // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    // MARK: - Navigation
+
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          let vistaReservaciones = segue.destination as!  ViewControllerReservacion
          let indice = tableView.indexPathForSelectedRow!
         vistaReservaciones.evento = arrEventos[indice.row].titulo
         vistaReservaciones.descripcion = arrEventos[indice.row].contenido
-         
-//         vistaReservaciones.evento = arrEventos[indice.row]
-         
-     
+        
+        // vistaReservaciones.evento = arrEventos[indice.row]
      }
 
 }
