@@ -11,7 +11,6 @@ import FirebaseDatabase
 class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var ref: DatabaseReference?
-    var databaseHandle: DatabaseHandle?
     var arrEventos = [String]()
     
     
@@ -34,26 +33,15 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
                 for events in snapshot.children.allObjects as! [DataSnapshot] {
                     let eventObj = events.value as? [String:String]
                     let eventoTitulo = eventObj?["titulo"]
-                
-                  
                     
                     self.arrEventos.append(eventoTitulo!)
+                
+               
                 }
                 self.tableView.reloadData()
             }
         }
         
-        
-//        databaseHandle = ref?.child("marcoEvent").observe(DataEventType.value, with: { (snapshot) in
-////            convierto el vaor de los datos en un string
-//            let post = snapshot.value as? String
-//            if let actualPost = post{
-//                self.arrEventos.append(actualPost)
-//
-//                self.tableView.reloadData()
-//            }
-//        }
-//   )
         
      )
     }
