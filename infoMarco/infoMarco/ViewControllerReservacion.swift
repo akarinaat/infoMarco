@@ -14,6 +14,8 @@ class ViewControllerReservacion: UIViewController {
     @IBOutlet weak var tfBoletos: UITextField!
     @IBOutlet weak var lbEventoTitulo: UILabel!
     
+    @IBOutlet weak var lbContenidoEvento: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Reservaciones"
@@ -34,6 +36,7 @@ class ViewControllerReservacion: UIViewController {
         let vistaConformacionReservacion = segue.destination as! ViewControllerConfirmacionReservacion
         vistaConformacionReservacion.boletos = tfBoletos.text
         vistaConformacionReservacion.nombreEvento = lbEventoTitulo.text
+      
     }
     
 
