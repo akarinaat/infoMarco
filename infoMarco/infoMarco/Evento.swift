@@ -9,17 +9,17 @@ import UIKit
 
 class Evento: NSObject {
     
-    var iD : String
+//    var iD : String
     var titulo : String
     var contenido : String
-    var imagen : UIImage
+//    var imagen : UIImage
     
-    init(iD : String, titulo : String, contenido : String, imagen : UIImage){
+    init(titulo : String, contenido : String){
         
-        self.iD = iD
+//        self.iD = iD
         self.titulo = titulo
         self.contenido = contenido
-        self.imagen = imagen
+//        self.imagen = imagen
         
     }
 }

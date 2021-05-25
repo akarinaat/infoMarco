@@ -6,10 +6,19 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var sBorrar = ["Evento 1","Evento 2","Evento 3","Evento 4", "Evento 5"]
+    var ref: DatabaseReference?
+    var arrEventos = [Evento]()
+    
+    
+    
+    @IBOutlet weak var imgCell: UIImageView!
+    
+    
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,36 +26,60 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        ref = Database.database().reference().child("marcoEvent")
+        ref?.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount>0{
+
+                for events in snapshot.children.allObjects as! [DataSnapshot] {
+                    let eventObj = events.value as? [String:String]
+                    let eventoTitulo = eventObj?["titulo"]
+                    let eventoDescripcion = eventObj?["contenido"]
+                   
+                    
+                    
+                    let eventoMarco = Evento(titulo: eventoTitulo ?? "", contenido: eventoDescripcion ?? "")
+//                    self.arrEventos.append(eventoTitulo!)
+                
+                    self.arrEventos.append(eventoMarco)
+                    print(eventoTitulo)
+                    print(eventoDescripcion)
+                }
+                self.tableView.reloadData()
+             
+            }
+        }
+        
+        
+     )
     }
+    
     
     // MARK: Metodos del Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return sBorrar.count
+        return arrEventos.count
         
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventos")!
         
-        cell.textLabel?.text = sBorrar[indexPath.row]
+        cell.textLabel?.text = arrEventos[indexPath.row].titulo
         
         return cell
         
     }
-
-    
-    
-    // MARK: - Navigation
-
+    // MARK: - Navigatio
  // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          let vistaReservaciones = segue.destination as!  ViewControllerReservacion
          let indice = tableView.indexPathForSelectedRow!
+        vistaReservaciones.evento = arrEventos[indice.row].titulo
+        vistaReservaciones.descripcion = arrEventos[indice.row].contenido
          
-         vistaReservaciones.evento = sBorrar[indice.row]
+//         vistaReservaciones.evento = arrEventos[indice.row]
          
      
      }

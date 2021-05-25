@@ -34,8 +34,8 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
         
         cell.lbTitulo.text = listaEventos[indexPath.row].titulo
         cell.tvContenido.text = listaEventos[indexPath.row].contenido
-        cell.imgEvento.image = listaEventos[indexPath.row].imagen
-        cell.lbCodigo.text = listaEventos[indexPath.row].iD
+//        cell.imgEvento.image = listaEventos[indexPath.row].imagen
+//        cell.lbCodigo.text = listaEventos[indexPath.row].iD
         
         return cell
         

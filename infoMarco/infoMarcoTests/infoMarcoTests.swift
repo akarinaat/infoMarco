@@ -6,7 +6,8 @@
 //
 
 import XCTest
-@testable import infoMarco
+
+
 
 class infoMarcoTests: XCTestCase {
 
