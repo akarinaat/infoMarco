@@ -21,7 +21,7 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
     @IBOutlet weak var tfTitulo: UITextField!
     @IBOutlet weak var tvContenido: UITextView!
     
-    var delegado : protocoloAgregaEvento!
+    var delegado : protocoloAgregaEvento?
     var counterEvent = 0
   
     let database = Database.database().reference()
@@ -64,8 +64,10 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         let imageName = UUID().uuidString
         
         if let titulo = tfTitulo.text, let contenido = tvContenido.text {
-            let object: [String: Any] = ["eventoID": "marcoEvent"+String(counterEvent), "titulo": titulo, "contenido": contenido, "imagenUid":imageName]
-            database.child("marcoEvent"+String(counterEvent)).setValue(object)
+            let object: [String: Any] = ["titulo": titulo, "contenido": contenido, "imagenUid":imageName]
+//            database.child("marcoEvent"+String(counterEvent)).setValue(object)
+            database.child("marcoEvent").childByAutoId().setValue(object)
+            
         }
         
         let imageReference = Storage.storage().reference().child("imagesFolder").child(imageName)
@@ -103,14 +105,13 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
             }
         }
         
-        // esto tiene que ver con el uso de los tables view
-        let evento = Evento(iD: "marcoEvent"+String(counterEvent), titulo: tfTitulo.text!, contenido: tvContenido.text!, imagen: imgFoto.image!)
-        delegado.agregarEvento(ev: evento)
-        dismiss(animated: true, completion: nil)
-        //
-        
-        
-    }
+//         esto tiene que ver con el uso de los tables view
+//        let evento = Evento(iD: "marcoEvent"+String(counterEvent), titulo: tfTitulo.text!, contenido: tvContenido.text!, imagen: imgFoto.image!)
+//        delegado?.agregarEvento(ev: evento)
+//        dismiss(animated: true, completion: nil)
+//
+//
+//    }
     
     // LA VISTA NO ES MODAL, NO ES NECESARIO UN UNWIND
     // Aunque puedo equivocarme, sería revoltoso visualmente hablando
@@ -138,4 +139,5 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         dismiss(animated: true, completion: nil)
     }
 
+}
 }
