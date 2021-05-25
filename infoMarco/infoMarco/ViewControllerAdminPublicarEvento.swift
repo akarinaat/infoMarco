@@ -64,7 +64,7 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         let imageName = UUID().uuidString
         
         if let titulo = tfTitulo.text, let contenido = tvContenido.text {
-            let object: [String: Any] = ["eventoID": "marcoEvent"+String(counterEvent), "titulo": titulo, "contenido": contenido, "imagenUid":imageName]
+            let object: [String: Any] = ["titulo": titulo, "contenido": contenido, "imagenUid":imageName]
 //            database.child("marcoEvent"+String(counterEvent)).setValue(object)
             database.child("marcoEvent").childByAutoId().setValue(object)
             
