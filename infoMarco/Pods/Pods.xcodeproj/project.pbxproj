@@ -9918,7 +9918,6 @@
 		5A062A27DBA7C149154C0660BDC91EF3 /* civil_time.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = civil_time.cc; path = absl/time/civil_time.cc; sourceTree = "<group>"; };
 		5A0B60572733381FA6EE6D774E8A2741 /* BoringSSL-GRPC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "BoringSSL-GRPC.modulemap"; sourceTree = "<group>"; };
 		5A187C74DB938A1B5B7E260B40A79F99 /* endpoint_cfstream.cc */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = endpoint_cfstream.cc; path = src/core/lib/iomgr/endpoint_cfstream.cc; sourceTree = "<group>"; };
-		5A39814B265CBDFA00C7F495 /* EventClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventClass.swift; path = ../infoMarco/EventClass.swift; sourceTree = "<group>"; };
 		5A5F1BE41E4425414860D5546F824036 /* core_codegen_interface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = core_codegen_interface.h; path = include/grpcpp/impl/codegen/core_codegen_interface.h; sourceTree = "<group>"; };
 		5A6471DED5A82E4942FB5E82C32044F3 /* api_trace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = api_trace.h; path = src/core/lib/surface/api_trace.h; sourceTree = "<group>"; };
 		5A64D816C1AB28E65D5477B2D94B1824 /* create_channel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = create_channel.h; path = include/grpcpp/create_channel.h; sourceTree = "<group>"; };
@@ -16197,7 +16196,6 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
-				5A39814B265CBDFA00C7F495 /* EventClass.swift */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				9DC6A682DF54B7E0131789C2DAE65AD0 /* Frameworks */,
 				7D435EEE78CA6A7C07F39C807D1142CF /* Pods */,

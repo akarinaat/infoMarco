@@ -106,13 +106,12 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         }
         
 //         esto tiene que ver con el uso de los tables view
-        let evento = Evento(iD: "marcoEvent"+String(counterEvent), titulo: tfTitulo.text!, contenido: tvContenido.text!, imagen: imgFoto.image!)
-        delegado?.agregarEvento(ev: evento)
-        dismiss(animated: true, completion: nil)
-        
-        
-        
-    }
+//        let evento = Evento(iD: "marcoEvent"+String(counterEvent), titulo: tfTitulo.text!, contenido: tvContenido.text!, imagen: imgFoto.image!)
+//        delegado?.agregarEvento(ev: evento)
+//        dismiss(animated: true, completion: nil)
+//
+//
+//    }
     
     // LA VISTA NO ES MODAL, NO ES NECESARIO UN UNWIND
     // Aunque puedo equivocarme, sería revoltoso visualmente hablando
@@ -140,4 +139,5 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         dismiss(animated: true, completion: nil)
     }
 
+}
 }
