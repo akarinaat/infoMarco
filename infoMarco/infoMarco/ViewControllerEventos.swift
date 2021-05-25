@@ -11,7 +11,7 @@ import FirebaseDatabase
 class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var ref: DatabaseReference?
-    var arrEventos = [String]()
+    var arrEventos = [Evento]()
     
     
     
@@ -30,15 +30,23 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
         ref = Database.database().reference().child("marcoEvent")
         ref?.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount>0{
+
                 for events in snapshot.children.allObjects as! [DataSnapshot] {
                     let eventObj = events.value as? [String:String]
                     let eventoTitulo = eventObj?["titulo"]
+                    let eventoDescripcion = eventObj?["contenido"]
+                   
                     
-                    self.arrEventos.append(eventoTitulo!)
+                    
+                    let eventoMarco = Evento(titulo: eventoTitulo ?? "", contenido: eventoDescripcion ?? "")
+//                    self.arrEventos.append(eventoTitulo!)
                 
-               
+                    self.arrEventos.append(eventoMarco)
+                    print(eventoTitulo)
+                    print(eventoDescripcion)
                 }
                 self.tableView.reloadData()
+             
             }
         }
         
@@ -58,7 +66,7 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventos")!
         
-        cell.textLabel?.text = arrEventos[indexPath.row]
+        cell.textLabel?.text = arrEventos[indexPath.row].titulo
         
         return cell
         
@@ -68,8 +76,10 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          let vistaReservaciones = segue.destination as!  ViewControllerReservacion
          let indice = tableView.indexPathForSelectedRow!
+        vistaReservaciones.evento = arrEventos[indice.row].titulo
+        vistaReservaciones.descripcion = arrEventos[indice.row].contenido
          
-         vistaReservaciones.evento = arrEventos[indice.row]
+//         vistaReservaciones.evento = arrEventos[indice.row]
          
      
      }
