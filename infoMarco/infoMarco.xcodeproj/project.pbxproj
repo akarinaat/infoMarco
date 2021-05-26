@@ -42,6 +42,7 @@
 		C385F907265A298700D92CFB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C385F906265A292400D92CFB /* CustomTableViewCell.swift */; };
 		C399097E265A20D8001A8166 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C399097D265A20D8001A8166 /* CustomTableViewCell.swift */; };
 		C39B38942659CBDE0088E0B1 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B38932659CBDE0088E0B1 /* Evento.swift */; };
+		C3EE7FAF265DBA0F00B439CB /* CustomTableViewCellUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EE7FAE265DBA0F00B439CB /* CustomTableViewCellUser.swift */; };
 		D1E6D997F0999EAF5BCDF4EF /* Pods_infoMarco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A8086BF7A7C393B9EE074F /* Pods_infoMarco.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		C399097D265A20D8001A8166 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C39B38932659CBDE0088E0B1 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		C39B38952659CC2B0088E0B1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		C3EE7FAE265DBA0F00B439CB /* CustomTableViewCellUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				5A810A8C262E268300A26010 /* ViewController.swift */,
 				5A810A8E262E268300A26010 /* Main.storyboard */,
 				C399097D265A20D8001A8166 /* CustomTableViewCell.swift */,
+				C3EE7FAE265DBA0F00B439CB /* CustomTableViewCellUser.swift */,
 				5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */,
 				5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */,
 				5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */,
@@ -421,6 +424,7 @@
 				5A9F6144264B9F7A000FF861 /* ViewControllerNoticias.swift in Sources */,
 				5AEA4A6D2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift in Sources */,
 				941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */,
+				C3EE7FAF265DBA0F00B439CB /* CustomTableViewCellUser.swift in Sources */,
 				5A51EE5D2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift in Sources */,
 				5ACFAE1E26506B7600AA5CF8 /* ViewControllerAdminEventos.swift in Sources */,
 				941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */,

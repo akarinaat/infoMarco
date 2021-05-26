@@ -20,9 +20,9 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
     @IBOutlet weak var imgFoto: UIImageView!
     @IBOutlet weak var tfTitulo: UITextField!
     @IBOutlet weak var tvContenido: UITextView!
+    @IBOutlet weak var tfFecha: UITextField!
     
-    var delegado : protocoloAgregaEvento?
-    var counterEvent = 0
+    var delegado : protocoloAgregaEvento!
   
     let database = Database.database().reference()
     
@@ -63,13 +63,6 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         
         let imageName = UUID().uuidString
         
-        if let titulo = tfTitulo.text, let contenido = tvContenido.text {
-            let object: [String: Any] = ["titulo": titulo, "contenido": contenido, "imagenUid":imageName]
-//            database.child("marcoEvent"+String(counterEvent)).setValue(object)
-            database.child("marcoEvent").childByAutoId().setValue(object)
-            
-        }
-        
         let imageReference = Storage.storage().reference().child("imagesFolder").child(imageName)
         
         imageReference.putData(data, metadata: nil) { (metadata, err) in
@@ -88,22 +81,22 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
                     return
                 }
                 
-                let dataReference = Firestore.firestore().collection("imagesCollection").document()
-                let documentUid = dataReference.documentID
-                
                 let urlString = url.absoluteString
                 
-                let data = ["uid": documentUid, "imageUrl": urlString]
+                let data = ["name": imageName, "imageUrl": urlString]
+                    
+                self.database.child("imagesCollection").child(imageName).setValue(data)
                 
-                dataReference.setData(data) { (err) in
-                    if let err = err {
-                        print(err.localizedDescription)
-                        return
-                    }
+                if let titulo = self.tfTitulo.text, let contenido = self.tvContenido.text, let fecha = self.tfFecha.text {
+                    let object: [String: Any] = ["titulo": titulo, "fecha": fecha, "contenido": contenido, "imagenUid":urlString]
+                    
+                    self.database.child("marcoEvent").childByAutoId().setValue(object)
                     
                 }
             }
         }
+        
+    }
         
 //         esto tiene que ver con el uso de los tables view
 //        let evento = Evento(iD: "marcoEvent"+String(counterEvent), titulo: tfTitulo.text!, contenido: tvContenido.text!, imagen: imgFoto.image!)
@@ -111,7 +104,6 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
 //        dismiss(animated: true, completion: nil)
 //
 //
-//    }
     
     // LA VISTA NO ES MODAL, NO ES NECESARIO UN UNWIND
     // Aunque puedo equivocarme, sería revoltoso visualmente hablando
@@ -127,7 +119,7 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
     */
     
     // MARK: - Metodos de delegado de UIImage Picker Controller
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let foto = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
@@ -138,6 +130,6 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+}
 
-}
-}
