@@ -17,6 +17,8 @@ class ViewControllerConfirmacionReservacion: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Confirmación reservacion"
         lbNoBletos.text = boletos
         lbNombreEvento.text = nombreEvento
         // Do any additional setup after loading the view.
