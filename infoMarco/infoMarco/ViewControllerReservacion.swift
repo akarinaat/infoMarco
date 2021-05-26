@@ -40,6 +40,7 @@ class ViewControllerReservacion: UIViewController {
         let vistaConformacionReservacion = segue.destination as! ViewControllerConfirmacionReservacion
         vistaConformacionReservacion.boletos = tfBoletos.text
         vistaConformacionReservacion.nombreEvento = lbEventoTitulo.text
+        vistaConformacionReservacion.horario = lbFecha.text
       
     }
     
