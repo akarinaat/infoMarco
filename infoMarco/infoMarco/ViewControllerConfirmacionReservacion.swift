@@ -11,14 +11,21 @@ class ViewControllerConfirmacionReservacion: UIViewController {
 
     var boletos: String!
     var nombreEvento: String!
+    var horario: String!
     
     @IBOutlet weak var lbNoBletos: UILabel!
     @IBOutlet weak var lbNombreEvento: UILabel!
+    
+    @IBOutlet weak var lbHorario: UILabel!
+    
+    @IBOutlet weak var imagenQR: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lbNoBletos.text = boletos
         lbNombreEvento.text = nombreEvento
+        lbHorario.text = horario
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +38,41 @@ class ViewControllerConfirmacionReservacion: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    @IBAction func confirmarGenerarQR(_ sender: UIButton) {
+//        let evT = lbNombreEvento.text!
+//        let evH = lbHorario.text
+//        let evB = lbNoBletos.text
+//
+//        let confString = "\(evT)\n\(evH)\n\(evB)"
+////        let data = confString.data(using: String.Encoding.ascii)
+//        imagenQR.image = generarCodigoQR(Name: confString)
+    
+        
+//        let confString = lbNombreEvento.text! + lbHorario.text! + lbNoBletos.text!
+        let confString = "HOLA"
+
+
+        imagenQR.image = generarCodigoQR(Name: confString)
+
+        
+    }
+    
+    func generarCodigoQR(Name: String) -> UIImage?{
+        let data_nombre = Name.data(using:String.Encoding.ascii)
+
+        if let filter = CIFilter(name: "CIQRCodeGenerator"){
+            filter.setValue(data_nombre, forKey: "inputMessage")
+
+            let transform = CGAffineTransform(scaleX: 3, y: 3)
+            if let output = filter.outputImage?.transformed(by: transform){
+                return UIImage(ciImage: output)
+            }
+
+        }
+        return nil
+
+    }
 
 }
