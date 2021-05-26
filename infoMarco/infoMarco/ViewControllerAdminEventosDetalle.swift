@@ -24,7 +24,8 @@ class ViewControllerAdminEventosDetalle: UIViewController, UIImagePickerControll
         super.viewDidLoad()
 
         title = "Editar Evento"
-//        imgEvento.image = unEvento.imagen
+        let url = URL(string : unEvento.imagen)
+        imgEvento.kf.setImage(with: url)
         lbTitulo.text = unEvento.titulo
         tvEvento.text = unEvento.contenido
         
@@ -34,7 +35,7 @@ class ViewControllerAdminEventosDetalle: UIViewController, UIImagePickerControll
         
         unEvento.titulo = lbTitulo.text!
         unEvento.contenido = tvEvento.text!
-//        unEvento.imagen = imgEvento.image!
+        //unEvento.imagen = imgEvento.image!
         delegado.actualizaEvento(ev: unEvento)
         self.dismiss(animated: true, completion: nil)
         
