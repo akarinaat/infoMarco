@@ -6,16 +6,37 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
+import FirebaseFirestore
+import Kingfisher
 
 class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITableViewDataSource, protocoloAgregaEvento, protocoloActualizasEvento {
     
-    var counter = 0
+    var ref: DatabaseReference?
     var listaEventos = [Evento]()
     
     @IBOutlet weak var tableViewEventos: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference().child("marcoEvent")
+        ref?.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount>=0{
+
+                for events in snapshot.children.allObjects as! [DataSnapshot] {
+                    let eventObj = events.value as? [String:String]
+                    let eventoTitulo = eventObj?["titulo"]
+                    let eventoContenido = eventObj?["contenido"]
+                    let eventoFecha = eventObj?["fecha"]
+                    let eventoImgURLString = eventObj?["imagenUid"]
+                    let eventoMarco = Evento.init(titulo: eventoTitulo ?? "", fecha: eventoFecha ?? "", contenido: eventoContenido ?? "", imagen: eventoImgURLString ?? "")
+                    self.listaEventos.append(eventoMarco)
+                }
+                self.tableViewEventos.reloadData()
+            }
+        })
         
         title = "Lista Eventos"
     }
@@ -33,10 +54,13 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventosAdmin", for: indexPath) as! CustomTableViewCell
         
         cell.lbTitulo.text = listaEventos[indexPath.row].titulo
+        cell.lbFecha.text = listaEventos[indexPath.row].fecha
         cell.tvContenido.text = listaEventos[indexPath.row].contenido
-//        cell.imgEvento.image = listaEventos[indexPath.row].imagen
-//        cell.lbCodigo.text = listaEventos[indexPath.row].iD
-        
+        if listaEventos[indexPath.row].imagen != "nil" {
+            let url = URL(string : listaEventos[indexPath.row].imagen)
+            print(listaEventos[indexPath.row].imagen)
+            cell.imgEvento.kf.setImage(with: url)
+        }
         return cell
         
     }
@@ -57,7 +81,6 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
         }
         else {
             let vistaPublicar = segue.destination as! ViewControllerAdminPublicarEvento
-            vistaPublicar.counterEvent = counter
             vistaPublicar.delegado = self
         }
         
@@ -65,16 +88,29 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
     
     // MARK: - Metodos del protocolo Agregar Evento
     func agregarEvento(ev : Evento){
+        // arreglar pq esto edita directamente la table view
+        // se debe editar la base de datos y despues actualizar
+        // la table view
+        
+        /*
         listaEventos.append(ev)
-        counter += 1
+        counter += 
         tableViewEventos.reloadData()
+         */
     }
     
     // MARK: - Metodos del protocolo Actualiza Evento
     func actualizaEvento(ev: Evento) {
+        // arreglar pq esto edita directamente la table view
+        // se debe editar la base de datos y despues actualizar
+        // la table view
+        
+        /*
         let indice = tableViewEventos.indexPathForSelectedRow!
         listaEventos[indice.row] = ev
         tableViewEventos.reloadData()
+        */
+        
     }
 
 }
