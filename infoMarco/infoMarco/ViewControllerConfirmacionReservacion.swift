@@ -41,21 +41,12 @@ class ViewControllerConfirmacionReservacion: UIViewController {
     
     
     @IBAction func confirmarGenerarQR(_ sender: UIButton) {
-//        let evT = lbNombreEvento.text!
-//        let evH = lbHorario.text
-//        let evB = lbNoBletos.text
-//
-//        let confString = "\(evT)\n\(evH)\n\(evB)"
-////        let data = confString.data(using: String.Encoding.ascii)
-//        imagenQR.image = generarCodigoQR(Name: confString)
-    
-        
-//        let confString = lbNombreEvento.text! + lbHorario.text! + lbNoBletos.text!
-        let confString = "HOLA"
-
-
+        let evT = lbNombreEvento.text!
+        let evH = lbHorario.text!
+        let evB = lbNoBletos.text!
+        print("Nombre evento: \(evT)\nHorario: \(evH)\nNo.Boletos\(evB)")
+       let confString = "CONFIRMADO, GRACIAS POR SU COMPRA"
         imagenQR.image = generarCodigoQR(Name: confString)
-
         
     }
     
