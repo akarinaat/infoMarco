@@ -24,7 +24,6 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
         ref = Database.database().reference().child("marcoEvent")
         ref?.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount>=0{
-
                 for events in snapshot.children.allObjects as! [DataSnapshot] {
                     let eventObj = events.value as? [String:String]
                     let eventoTitulo = eventObj?["titulo"]
@@ -58,7 +57,6 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
         cell.tvContenido.text = listaEventos[indexPath.row].contenido
         if listaEventos[indexPath.row].imagen != "nil" {
             let url = URL(string : listaEventos[indexPath.row].imagen)
-            print(listaEventos[indexPath.row].imagen)
             cell.imgEvento.kf.setImage(with: url)
         }
         return cell
