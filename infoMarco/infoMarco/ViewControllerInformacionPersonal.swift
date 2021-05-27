@@ -16,7 +16,7 @@ class ViewControllerInformacionPersonal: UIViewController {
     @IBOutlet weak var lbFechaRenov: UILabel!
     //var usuarioActual : Usuario!
     
-    //var usuario : Usuario!
+    var usuario : Usuario!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +42,13 @@ class ViewControllerInformacionPersonal: UIViewController {
             lbNombre.text = nombre
         }
         if let miembroDesde = defaults.value(forKey: "MiembroDesde") as? String {
-            lbNombre.text = miembroDesde
+            lbMiembroDesde.text = miembroDesde
         }
         if let tipoMemb = defaults.value(forKey: "TipoMemb") as? String {
-            lbNombre.text = tipoMemb
+            lbTipoMemb.text = tipoMemb
         }
         if let fechaRenov = defaults.value(forKey: "FechaRenov") as? String {
-            lbNombre.text = fechaRenov
+            lbFechaRenov.text = fechaRenov
         }
         
     }

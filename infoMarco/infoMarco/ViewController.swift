@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfContrasena: UITextField!
     
-    var ref: DatabaseReference?
+    var ref: DatabaseReference!
     var arrAdmins = [Administrador]()
     var arrMiembros = [Usuario]()
     
@@ -23,15 +23,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // Extraer usuarios administradores de la base de datos
-        ref = Database.database().reference().child("admnUsrs")
-        ref?.observe(DataEventType.value, with: {(snapshot) in
+        Database.database().reference().child("admnUsrs").observeSingleEvent(of: .value, with: {(snapshot) in
             if snapshot.childrenCount>0{
 
                 for admins in snapshot.children.allObjects as! [DataSnapshot] {
                     
                     let adminObj = admins.value as? [String:String]
                     let adminEmail = adminObj?["correo"]
-                    
+
                     let adminMarco = Administrador(email: adminEmail ?? "")
                 
                     self.arrAdmins.append(adminMarco)
@@ -41,35 +40,40 @@ class ViewController: UIViewController {
         }
         )
         
-        // Extraer usuarios miembros de la base de datos
-        ref = Database.database().reference().child("memberUsrs")
-        ref?.observe(DataEventType.value, with: {(snapshot) in
-            if snapshot.childrenCount>0{
-
-                for miembros in snapshot.children.allObjects as! [DataSnapshot] {
-                    
-                    let miembroObj = miembros.value as? [String:String]
-                    
-                    let mApellidos = miembroObj?["Apellidos"]
-                    let mCategoria = miembroObj?["Categoria"]
-                    let mEmail = miembroObj?["Email"]
-                    let mFecha_Ing = miembroObj?["Fecha_Ing"]
-                    let mFecha_Ven = miembroObj?["Fecha_Ven"]
-                    let mID_CAT = miembroObj?["ID_CAT"]
-                    let mID_Miembro = miembroObj?["ID_Miembro"]
-                    let mMiembro_Desde = miembroObj?["Miembro_Desde"]
-                    let mNombres = miembroObj?["Nombres"]
-                    
-                    let miembroMarco = Usuario(ID_Miembro: mID_Miembro ?? "", ID_CAT: mID_CAT ?? "", sNombres: mNombres ?? "", sApellidos: mApellidos ?? "", sCategoria: mCategoria ?? "", sEmail: mEmail ?? "", sFecha_Ing: mFecha_Ing ?? "", sMiembro_Desde: mMiembro_Desde ?? "", sFecha_Ven: mFecha_Ven ?? "")
-                    
-                    print(miembroMarco.sNombres)
                 
-                    self.arrMiembros.append(miembroMarco)
+        // Extraer usuarios miembros de la base de datos
+        Database.database().reference().child("memberUsrs").observeSingleEvent(of: .value, with: {(snapshot) in
+            if snapshot.childrenCount>0{
+                for miembros in snapshot.children.allObjects as! [DataSnapshot] {
+
+                    let miembroObj = miembros.value as? [String:Any]
                     
+                    let mApellidos = miembroObj?["apellidos"]
+                    let mCategoria = miembroObj?["categoria"]
+                    let mEmail = miembroObj?["email"]
+                    let mFecha_Ing = miembroObj?["fecha_ing"]
+                    let mFecha_Ven = miembroObj?["fecha_ven"]
+                    let mID_CAT = miembroObj?["id_cat"]
+                    let mID_Miembro = miembroObj?["id_miembro"]
+                    let mMiembro_Desde = miembroObj?["miembro_desde"]
+                    let mNombres = miembroObj?["nombres"]
+
+                    let miembroMarco = Usuario(ID_Miembro: mID_Miembro as? String ?? "",
+                                               ID_CAT: mID_CAT as? String ?? "",
+                                               sNombres: mNombres as? String ?? "",
+                                               sApellidos: mApellidos as? String ?? "",
+                                               sCategoria: mCategoria as? String ?? "",
+                                               sEmail: mEmail as? String ?? "",
+                                               sFecha_Ing: mFecha_Ing as? String ?? "",
+                                               sMiembro_Desde: mMiembro_Desde as? String ?? "",
+                                               sFecha_Ven: mFecha_Ven as? String ?? "")
+                                    
+                    self.arrMiembros.append(miembroMarco)
                 }
             }
         }
         )
+        
     }
     
     // Funcion para validar que los tf tengan datos y que el tf de correo tenga el formato correcto
@@ -166,15 +170,32 @@ class ViewController: UIViewController {
                         
                         let usr = self.findUser()
                         
-                        let defaults = UserDefaults.standard
+                        // Verificar que el usuario existe en el segundo registro
+                        if usr != nil {
                         
-                        defaults.setValue(usr!.sNombres + usr!.sApellidos, forKey: "NombreCompleto")
-                        defaults.setValue(usr!.sMiembro_Desde, forKey: "MiembroDesde")
-                        defaults.setValue(usr!.sCategoria, forKey: "TipoMemb")
-                        defaults.setValue(usr!.sFecha_Ven, forKey: "FechaRenov")
-                        
-                        // Ejecutar segue para el usuario
-                        self.performSegue(withIdentifier: "LogIn", sender: self)
+                            // Guardar la info del usuario en user defaults
+                            let defaults = UserDefaults.standard
+                            
+                            let nombreCompleto = usr!.sNombres + " " + usr!.sApellidos
+                            
+                            defaults.setValue(nombreCompleto, forKey: "NombreCompleto")
+                            defaults.set(usr!.sMiembro_Desde, forKey: "MiembroDesde")
+                            defaults.set(usr!.sCategoria, forKey: "TipoMemb")
+                            defaults.set(usr!.sFecha_Ven, forKey: "FechaRenov")
+                            
+                            // Ejecutar segue para el usuario
+                            self.performSegue(withIdentifier: "LogIn", sender: self)
+                            
+                        } else {
+                            
+                            // Crear y desplegar alerta
+                            let alerta = UIAlertController(title: "ERROR", message: "Correo inexistente o contraseña incorrecta", preferredStyle: .alert)
+                            let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                            
+                            alerta.addAction(accion)
+                            self.present(alerta, animated: true, completion: nil)
+                            
+                        }
                         
                     } else {
                         
@@ -219,38 +240,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    /*// Funcion para mandar datos a las otras vistas
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        // Verificar si vamos a pasar a una vista de miembro o de administrador
-        if segue.identifier == "LogIn" {
-            
-            let usr = findUser()
-            
-            // Declarar referencia a las vistas destino y mandar usuario
-            let destino = self.tabBarController?.viewControllers![1] as! ViewControllerEventos
-            
-            destino.usuario = usr
-
-            /*let destino1 = self.tabBarController?.viewControllers![1] as! ViewControllerNoticias
-            
-            destino1.usuario = usr
-
-            let destino2 = self.tabBarController?.viewControllers![1] as! ViewControllerPromoBeneficios
-            
-            destino2.usuario = usr
-
-            let destino3 = self.tabBarController?.viewControllers![1] as! ViewControllerInformacionPersonal
-            
-            destino3.usuario = usr*/
-            
-        }
-        
-    }*/
-    
-    
-    
     
 }
 
