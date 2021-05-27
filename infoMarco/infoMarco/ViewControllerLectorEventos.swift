@@ -61,7 +61,7 @@ class ViewControllerLectorEventos: UIViewController {
                 }
             }
         })
-        buttonVery.backgroundColor?.ciColor.green
+        buttonVery.backgroundColor = UIColor.green
     }
     
     @IBAction func botonVerificar(_ sender: UIButton) {
