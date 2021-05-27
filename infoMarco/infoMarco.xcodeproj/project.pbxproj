@@ -28,6 +28,8 @@
 		5A9F6149264BA03A000FF861 /* ViewControllerRenovacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F6148264BA03A000FF861 /* ViewControllerRenovacion.swift */; };
 		5A9F614E264BA1B1000FF861 /* ViewControllerReservacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F614D264BA1B1000FF861 /* ViewControllerReservacion.swift */; };
 		5AA40AB02651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */; };
+		5AB7126D265F77C200966A7E /* Noticia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7126C265F77C200966A7E /* Noticia.swift */; };
+		5AB71277265F79D600966A7E /* CustomTableViewCellNoticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB71276265F79D600966A7E /* CustomTableViewCellNoticias.swift */; };
 		5ABA96B126504495004A4D55 /* ViewControllerMembresias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABA96B026504495004A4D55 /* ViewControllerMembresias.swift */; };
 		5ACFAE1E26506B7600AA5CF8 /* ViewControllerAdminEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */; };
 		5AEA4A682651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */; };
@@ -93,6 +95,8 @@
 		5A9F6148264BA03A000FF861 /* ViewControllerRenovacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRenovacion.swift; sourceTree = "<group>"; };
 		5A9F614D264BA1B1000FF861 /* ViewControllerReservacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReservacion.swift; sourceTree = "<group>"; };
 		5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfirmacionReservacion.swift; sourceTree = "<group>"; };
+		5AB7126C265F77C200966A7E /* Noticia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticia.swift; sourceTree = "<group>"; };
+		5AB71276265F79D600966A7E /* CustomTableViewCellNoticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellNoticias.swift; sourceTree = "<group>"; };
 		5ABA96B026504495004A4D55 /* ViewControllerMembresias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMembresias.swift; sourceTree = "<group>"; };
 		5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminEventos.swift; sourceTree = "<group>"; };
 		5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarNoticia.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				5A810A8A262E268300A26010 /* SceneDelegate.swift */,
 				5A810A8C262E268300A26010 /* ViewController.swift */,
 				5A810A8E262E268300A26010 /* Main.storyboard */,
+				5AB71276265F79D600966A7E /* CustomTableViewCellNoticias.swift */,
 				C30E50D9265F5923004DBB95 /* AccesoViewController.swift */,
 				C399097D265A20D8001A8166 /* CustomTableViewCell.swift */,
 				C3EE7FAE265DBA0F00B439CB /* CustomTableViewCellUser.swift */,
@@ -190,6 +195,7 @@
 				5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */,
 				5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */,
 				5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */,
+				5AB7126C265F77C200966A7E /* Noticia.swift */,
 				5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */,
 				5AF79B0A26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift */,
 				5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */,
@@ -441,6 +447,8 @@
 				C30E50DA265F5923004DBB95 /* AccesoViewController.swift in Sources */,
 				941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */,
 				5A8F3D79264CA46500D19AA5 /* ViewControllerConfig.swift in Sources */,
+				5AB7126D265F77C200966A7E /* Noticia.swift in Sources */,
+				5AB71277265F79D600966A7E /* CustomTableViewCellNoticias.swift in Sources */,
 				5AEA4A682651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift in Sources */,
 				5AA40AB02651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift in Sources */,
 				5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */,
