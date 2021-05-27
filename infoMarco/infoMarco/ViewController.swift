@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     var ref: DatabaseReference?
     var arrAdmins = [Administrador]()
+    var arrMiembros = [Usuario]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,36 @@ class ViewController: UIViewController {
             }
         }
         )
+        
+        // Extraer usuarios miembros de la base de datos
+        ref = Database.database().reference().child("memberUsrs")
+        ref?.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount>0{
+
+                for miembros in snapshot.children.allObjects as! [DataSnapshot] {
+                    
+                    let miembroObj = miembros.value as? [String:String]
+                    
+                    let mApellidos = miembroObj?["Apellidos"]
+                    let mCategoria = miembroObj?["Categoria"]
+                    let mEmail = miembroObj?["Email"]
+                    let mFecha_Ing = miembroObj?["Fecha_Ing"]
+                    let mFecha_Ven = miembroObj?["Fecha_Ven"]
+                    let mID_CAT = miembroObj?["ID_CAT"]
+                    let mID_Miembro = miembroObj?["ID_Miembro"]
+                    let mMiembro_Desde = miembroObj?["Miembro_Desde"]
+                    let mNombres = miembroObj?["Nombres"]
+                    
+                    let miembroMarco = Usuario(ID_Miembro: mID_Miembro ?? "", ID_CAT: mID_CAT ?? "", sNombres: mNombres ?? "", sApellidos: mApellidos ?? "", sCategoria: mCategoria ?? "", sEmail: mEmail ?? "", sFecha_Ing: mFecha_Ing ?? "", sMiembro_Desde: mMiembro_Desde ?? "", sFecha_Ven: mFecha_Ven ?? "")
+                
+                    self.arrMiembros.append(miembroMarco)
+                    
+                }
+            }
+        }
+        )
+
+        
     }
     
     // Funcion para validar que los tf tengan datos y que el tf de correo tenga el formato correcto

@@ -7,46 +7,34 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseStorage
+import FirebaseFirestore
+import Kingfisher
 
 class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var ref: DatabaseReference?
     var arrEventos = [Evento]()
     
-    
-    
-    @IBOutlet weak var imgCell: UIImageView!
-    
-    
-    
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         ref = Database.database().reference().child("marcoEvent")
         ref?.observe(DataEventType.value, with: {(snapshot) in
-            if snapshot.childrenCount>0{
+            if snapshot.childrenCount>=0{
 
                 for events in snapshot.children.allObjects as! [DataSnapshot] {
                     let eventObj = events.value as? [String:String]
                     let eventoTitulo = eventObj?["titulo"]
-                    let eventoDescripcion = eventObj?["contenido"]
-                   
-                    
-                    
-                    let eventoMarco = Evento(titulo: eventoTitulo ?? "", contenido: eventoDescripcion ?? "")
-//                    self.arrEventos.append(eventoTitulo!)
-                
+                    let eventoContenido = eventObj?["contenido"]
+                    let eventoFecha = eventObj?["fecha"]
+                    let eventoImgURLString = eventObj?["imagenUid"]
+                    let eventoMarco = Evento.init(titulo: eventoTitulo ?? "", fecha: eventoFecha ?? "", contenido: eventoContenido ?? "", imagen: eventoImgURLString ?? "")
                     self.arrEventos.append(eventoMarco)
-                    print(eventoTitulo)
-                    print(eventoDescripcion)
                 }
                 self.tableView.reloadData()
-             
             }
         }
         
@@ -62,12 +50,22 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
         return arrEventos.count
         
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 219
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventos")!
-        
-        cell.textLabel?.text = arrEventos[indexPath.row].titulo
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventos", for: indexPath) as! CustomTableViewCellUser
+        cell.lbTitulo.text = arrEventos[indexPath.row].titulo
+        cell.lbFecha.text = arrEventos[indexPath.row].fecha
+        cell.tvContenido.text = arrEventos[indexPath.row].contenido
+        if arrEventos[indexPath.row].imagen != "nil" {
+            let url = URL(string : arrEventos[indexPath.row].imagen)
+            print(arrEventos[indexPath.row].imagen)
+            cell.imgEvento.kf.setImage(with: url)
+        }
         return cell
         
     }
@@ -77,8 +75,7 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          let vistaReservaciones = segue.destination as!  ViewControllerReservacion
          let indice = tableView.indexPathForSelectedRow!
-        vistaReservaciones.evento = arrEventos[indice.row].titulo
-        vistaReservaciones.descripcion = arrEventos[indice.row].contenido
+        vistaReservaciones.unEvento = arrEventos[indice.row]
         
         // vistaReservaciones.evento = arrEventos[indice.row]
      }

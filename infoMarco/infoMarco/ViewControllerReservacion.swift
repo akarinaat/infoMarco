@@ -9,18 +9,21 @@ import UIKit
 
 class ViewControllerReservacion: UIViewController {
     
-    var evento: String!
-    var descripcion: String!
+    var unEvento: Evento!
     @IBOutlet weak var tfBoletos: UITextField!
     @IBOutlet weak var lbEventoTitulo: UILabel!
-    
-    @IBOutlet weak var lbContenidoEvento: UILabel!
+    @IBOutlet weak var tvContenido: UITextView!
+    @IBOutlet weak var lbFecha: UILabel!
+    @IBOutlet weak var imageEvento: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Reservaciones"
-        lbEventoTitulo.text = evento
-        lbContenidoEvento.text = descripcion
+        lbEventoTitulo.text = unEvento.titulo
+        tvContenido.text = unEvento.contenido
+        lbFecha.text = unEvento.fecha
+        let url = URL(string : unEvento.imagen)
+        imageEvento.kf.setImage(with: url)
         // Do any additional setup after loading the view.
     }
     
@@ -37,6 +40,7 @@ class ViewControllerReservacion: UIViewController {
         let vistaConformacionReservacion = segue.destination as! ViewControllerConfirmacionReservacion
         vistaConformacionReservacion.boletos = tfBoletos.text
         vistaConformacionReservacion.nombreEvento = lbEventoTitulo.text
+        vistaConformacionReservacion.horario = lbFecha.text
       
     }
     

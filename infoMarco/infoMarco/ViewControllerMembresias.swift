@@ -28,7 +28,7 @@ class ViewControllerMembresias: UIViewController {
         
         let dummyGold = "Beneficios de Platinum más: acceso al museo todos los días de la semana con permio incuñido de tomar fotografías. Acesso a eventos GOLD para dos personas."
         
-        let dummyDiamond = "Beneficios de Gold más: regalo de cumpleaños. Invitación al evento anual más importante de MARCO. Acesso al museo las horas Diamond para disfrutarlo sin público en general."
+        let dummyDiamond = "Beneficios de Gold más: regalo de cumpleaños. Invitación al evento anual más importante de MARCO."
 
         lbPlatinum.text = dummyPlatinum;
         lbGold.text = dummyGold;
