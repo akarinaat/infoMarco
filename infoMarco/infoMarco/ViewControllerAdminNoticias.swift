@@ -6,34 +6,72 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
-class ViewControllerAdminNoticias:  UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+class ViewControllerAdminNoticias: UIViewController, UITableViewDelegate, UITableViewDataSource, protocoloAgregaNoticia  {
+    func agregarNoticia(not: Noticia) {
+//        sdf
+    }
+
+    var ref: DatabaseReference?
+    var arrNoticias = [Noticia]()
     
-    var sBorrar = ["Prueba"]
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        ref = Database.database().reference().child("Noticias")
+        ref?.observe(DataEventType.value, with: {(snapshot) in
+            if snapshot.childrenCount>=0{
+                for noticias in snapshot.children.allObjects as! [DataSnapshot] {
+                    let noticiaObj = noticias.value as? [String:String]
+                    let noticiaTitulo = noticiaObj?["titulo"]
+                    let noticiaContenido = noticiaObj?["contenido"]
+                let noticiaFecha = noticiaObj?["fecha"]
+                  
+                    let noticiasMarco = Noticia(titulo: noticiaTitulo ?? "", fecha: noticiaFecha ?? "", contenido: noticiaContenido ?? "")
+                    self.arrNoticias.append(noticiasMarco)}
+            }
+            self.tableView.reloadData()
+        }
+        
+             )
     }
     
     // MARK: Metodos del Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return sBorrar.count
-        
+        return arrNoticias.count
+            }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 219
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaNoticiasAdmin")!
-        
-        cell.textLabel?.text = sBorrar[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celdaNoticiasAdmin", for: indexPath) as! CustomTableViewCellNoticias
+        cell.lbTitulo.text = arrNoticias[indexPath.row].titulo
+        cell.lbFecha.text = arrNoticias[indexPath.row].fecha
+        cell.tvContenido.text = arrNoticias[indexPath.row].contenido
         
         return cell
         
     }
+    
+    // MARK: - Navigation
+
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vistaPublicar = segue.destination as! ViewControllerAdminPublicarNoticia
+        vistaPublicar.delegado = self
+     }
+
+}
+
 
     /*
     // MARK: - Navigation
@@ -45,4 +83,4 @@ class ViewControllerAdminNoticias:  UIViewController, UITableViewDelegate, UITab
     }
     */
 
-}
+
