@@ -52,14 +52,6 @@ class ViewControllerInformacionPersonal: UIViewController {
         
     }
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.portrait
-    }
-    
-    override var shouldAutorotate: Bool {
-        return false
-    }
-    
     func generarQRCode (){
         //en myString debemos poner el valor que queremos
         //desplegar en el codigo QR
