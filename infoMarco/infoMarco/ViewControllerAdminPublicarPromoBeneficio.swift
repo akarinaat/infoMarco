@@ -20,6 +20,13 @@ class ViewControllerAdminPublicarPromoBeneficio: UIViewController {
         dismiss(animated: true, completion: nil)
         
     }
+    
+    @IBAction func quitarTeclado(_ sender: UITapGestureRecognizer) {
+        
+        view.endEditing(true)
+        
+    }
+    
 
     /*
     // MARK: - Navigation
