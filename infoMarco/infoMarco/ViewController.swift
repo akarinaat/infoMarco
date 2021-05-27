@@ -144,6 +144,13 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func quitarTeclado(_ sender: UITapGestureRecognizer) {
+        
+        view.endEditing(true)
+        
+    }
+    
+    
     // MARK: - Navigation
     
     // Determinar si se logeará un usuario o un administrador y evitar ejecucion de segue validando si se escribe un correo valido y una contrasenia
@@ -177,6 +184,7 @@ class ViewController: UIViewController {
                             let nombreCompleto = usr!.sNombres + " " + usr!.sApellidos
                             
                             defaults.setValue(nombreCompleto, forKey: "NombreCompleto")
+                            defaults.set(usr!.sEmail, forKey: "user")
                             defaults.set(usr!.sMiembro_Desde, forKey: "MiembroDesde")
                             defaults.set(usr!.sCategoria, forKey: "TipoMemb")
                             defaults.set(usr!.sFecha_Ven, forKey: "FechaRenov")

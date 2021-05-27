@@ -33,6 +33,10 @@ class ViewControllerReservacion: UIViewController {
         
     }
     
+    @IBAction func quitarTeclado(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

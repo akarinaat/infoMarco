@@ -61,12 +61,13 @@ class ViewControllerLectorEventos: UIViewController {
                 }
             }
         })
-        buttonVery.backgroundColor?.ciColor.green
+        buttonVery.tintColor = UIColor.green
     }
     
-    @IBAction func botonVerificar(_ sender: UIButton) {
+    
+    @IBAction func quitarTeclado(_ sender: UITapGestureRecognizer) {
         
-        
+        view.endEditing(true)
         
     }
     
