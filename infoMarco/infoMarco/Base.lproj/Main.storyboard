@@ -378,6 +378,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Info. Personal" image="person" catalog="system" id="2rK-FM-zxA"/>
                     <connections>
+                        <outlet property="lbFechaRenov" destination="C0q-N0-IKB" id="0g6-c4-4gQ"/>
+                        <outlet property="lbMiembroDesde" destination="BmR-HB-77b" id="3Ef-un-RDi"/>
+                        <outlet property="lbNombre" destination="lOP-5k-PRk" id="CYH-DZ-a4b"/>
+                        <outlet property="lbTipoMemb" destination="f83-RH-oCt" id="76B-k1-wog"/>
                         <outlet property="qrCodeImage" destination="zpF-5q-ahH" id="Rzg-E6-Bje"/>
                     </connections>
                 </viewController>
