@@ -11,9 +11,14 @@ class ViewControllerNoticias: UIViewController, UITableViewDelegate, UITableView
     
 
     var sBorrar = ["Prueba"]
+    //var usuarioActual : Usuario!
+    
+   // var usuario : Usuario!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //usuarioActual = usuario
 
     }
     
@@ -30,6 +35,7 @@ class ViewControllerNoticias: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaNoticias")!
         
         cell.textLabel?.text = sBorrar[indexPath.row]
+        
         
         return cell
         

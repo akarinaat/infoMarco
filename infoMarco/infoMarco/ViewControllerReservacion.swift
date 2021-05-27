@@ -12,7 +12,7 @@ class ViewControllerReservacion: UIViewController {
     var unEvento: Evento!
     @IBOutlet weak var tfBoletos: UITextField!
     @IBOutlet weak var lbEventoTitulo: UILabel!
-    @IBOutlet weak var tvContenido: UITextView!
+    @IBOutlet weak var tvContenido: UILabel!
     @IBOutlet weak var lbFecha: UILabel!
     @IBOutlet weak var imageEvento: UIImageView!
     

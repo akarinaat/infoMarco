@@ -68,8 +68,6 @@ class ViewController: UIViewController {
             }
         }
         )
-
-        
     }
     
     // Funcion para validar que los tf tengan datos y que el tf de correo tenga el formato correcto
@@ -112,6 +110,20 @@ class ViewController: UIViewController {
         }
     }
     
+    func findUser() -> Usuario! {
+        
+        for miembro in arrMiembros {
+            if miembro.sEmail == tfEmail.text! {
+                
+                return miembro
+                
+            }
+        }
+        
+        return nil
+        
+    }
+    
     func findAdmin (email: String) -> Bool {
         
         for admin in arrAdmins {
@@ -147,6 +159,17 @@ class ViewController: UIViewController {
                     (result, error) in
                 
                     if let result = result, error == nil {
+                        
+                        // Guardar usuario en user defaults
+                        
+                        let usr = self.findUser()
+                        
+                        let defaults = UserDefaults.standard
+                        
+                        defaults.setValue(usr!.sNombres + usr!.sApellidos, forKey: "NombreCompleto")
+                        defaults.setValue(usr!.sMiembro_Desde, forKey: "MiembroDesde")
+                        defaults.setValue(usr!.sCategoria, forKey: "TipoMemb")
+                        defaults.setValue(usr!.sFecha_Ven, forKey: "FechaRenov")
                         
                         // Ejecutar segue para el usuario
                         self.performSegue(withIdentifier: "LogIn", sender: self)
@@ -194,6 +217,37 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    /*// Funcion para mandar datos a las otras vistas
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Verificar si vamos a pasar a una vista de miembro o de administrador
+        if segue.identifier == "LogIn" {
+            
+            let usr = findUser()
+            
+            // Declarar referencia a las vistas destino y mandar usuario
+            let destino = self.tabBarController?.viewControllers![1] as! ViewControllerEventos
+            
+            destino.usuario = usr
+
+            /*let destino1 = self.tabBarController?.viewControllers![1] as! ViewControllerNoticias
+            
+            destino1.usuario = usr
+
+            let destino2 = self.tabBarController?.viewControllers![1] as! ViewControllerPromoBeneficios
+            
+            destino2.usuario = usr
+
+            let destino3 = self.tabBarController?.viewControllers![1] as! ViewControllerInformacionPersonal
+            
+            destino3.usuario = usr*/
+            
+        }
+        
+    }*/
+    
+    
     
     
 }

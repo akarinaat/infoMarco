@@ -10,11 +10,15 @@ import UIKit
 class ViewControllerPromoBeneficios: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var sBorrar = ["Prueba"]
+    //var usuarioActual : Usuario!
+    
+    //var usuario : Usuario!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        //usuarioActual = usuario
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		526F9C752630CD7C005567ED /* ViewControllerPromoBeneficios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */; };
 		5A2719C9265D89B5002424A2 /* Administrador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2719C8265D89B5002424A2 /* Administrador.swift */; };
+		5A4936B0265F3CE800CA1053 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4936AF265F3CE800CA1053 /* Usuario.swift */; };
 		5A51EE4E2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */; };
 		5A51EE532650A9750051E11B /* ViewControllerAdminNoticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */; };
 		5A51EE582650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */; };
 		5A51EE5D2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */; };
 		5A51EE622650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A51EE612650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift */; };
-		5A7ABD73265F0EA00042A125 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7ABD72265F0EA00042A125 /* Usuario.swift */; };
 		5A7FD96E26596C7500220CB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A7FD96D26596C7500220CB7 /* GoogleService-Info.plist */; };
 		5A810A89262E268300A26010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A88262E268300A26010 /* AppDelegate.swift */; };
 		5A810A8B262E268300A26010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810A8A262E268300A26010 /* SceneDelegate.swift */; };
@@ -68,12 +68,12 @@
 		2E20F927414B67D9CC1E44BD /* Pods-infoMarco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infoMarco.debug.xcconfig"; path = "Target Support Files/Pods-infoMarco/Pods-infoMarco.debug.xcconfig"; sourceTree = "<group>"; };
 		526F9C742630CD7C005567ED /* ViewControllerPromoBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPromoBeneficios.swift; sourceTree = "<group>"; };
 		5A2719C8265D89B5002424A2 /* Administrador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Administrador.swift; sourceTree = "<group>"; };
+		5A4936AF265F3CE800CA1053 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = ../../../infoMarco/infoMarco/infoMarco/Usuario.swift; sourceTree = "<group>"; };
 		5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarEvento.swift; sourceTree = "<group>"; };
 		5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminNoticias.swift; sourceTree = "<group>"; };
 		5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminNoticiasDetalle.swift; sourceTree = "<group>"; };
 		5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPromoBeneficios.swift; sourceTree = "<group>"; };
 		5A51EE612650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPromosBeneficiosDetalle.swift; sourceTree = "<group>"; };
-		5A7ABD72265F0EA00042A125 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		5A7FD96D26596C7500220CB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A810A85262E268300A26010 /* infoMarco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infoMarco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A810A88262E268300A26010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 				5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */,
 				5AF79B0A26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift */,
 				5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */,
-				5A7ABD72265F0EA00042A125 /* Usuario.swift */,
+				5A4936AF265F3CE800CA1053 /* Usuario.swift */,
 				C39B38932659CBDE0088E0B1 /* Evento.swift */,
 				5A2719C8265D89B5002424A2 /* Administrador.swift */,
 				5ABA96B026504495004A4D55 /* ViewControllerMembresias.swift */,
@@ -427,7 +427,7 @@
 				5A9F6144264B9F7A000FF861 /* ViewControllerNoticias.swift in Sources */,
 				5AEA4A6D2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift in Sources */,
 				941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */,
-				5A7ABD73265F0EA00042A125 /* Usuario.swift in Sources */,
+				5A4936B0265F3CE800CA1053 /* Usuario.swift in Sources */,
 				C3EE7FAF265DBA0F00B439CB /* CustomTableViewCellUser.swift in Sources */,
 				5A51EE5D2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift in Sources */,
 				5ACFAE1E26506B7600AA5CF8 /* ViewControllerAdminEventos.swift in Sources */,

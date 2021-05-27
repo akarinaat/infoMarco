@@ -10,16 +10,51 @@ import UIKit
 class ViewControllerInformacionPersonal: UIViewController {
 
     @IBOutlet weak var qrCodeImage: UIImageView!
+    @IBOutlet weak var lbNombre: UILabel!
+    @IBOutlet weak var lbMiembroDesde: UILabel!
+    @IBOutlet weak var lbTipoMemb: UILabel!
+    @IBOutlet weak var lbFechaRenov: UILabel!
+    //var usuarioActual : Usuario!
+    
+    //var usuario : Usuario!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cargaUsuario()
+        
+        /*usuarioActual = usuario
+        
+        lbNombre.text = usuarioActual.sNombres + usuarioActual.sApellidos
+        lbMiembroDesde.text = usuarioActual.sMiembro_Desde
+        lbTipoMemb.text = usuarioActual.sCategoria
+        lbFechaRenov.text = usuarioActual.sFecha_Ven*/
         
         generarQRCode()
         
     }
     
+    func cargaUsuario(){
+        
+        let defaults = UserDefaults.standard
+        
+        if let nombre = defaults.value(forKey: "NombreCompleto") as? String {
+            lbNombre.text = nombre
+        }
+        if let miembroDesde = defaults.value(forKey: "MiembroDesde") as? String {
+            lbNombre.text = miembroDesde
+        }
+        if let tipoMemb = defaults.value(forKey: "TipoMemb") as? String {
+            lbNombre.text = tipoMemb
+        }
+        if let fechaRenov = defaults.value(forKey: "FechaRenov") as? String {
+            lbNombre.text = fechaRenov
+        }
+        
+    }
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.landscape
+        return UIInterfaceOrientationMask.portrait
     }
     
     override var shouldAutorotate: Bool {
