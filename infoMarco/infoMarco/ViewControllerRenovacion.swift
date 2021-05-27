@@ -15,6 +15,14 @@ class ViewControllerRenovacion: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
 
     /*
     // MARK: - Navigation

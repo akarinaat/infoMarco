@@ -20,6 +20,21 @@ class ViewControllerAdminPublicarPromoBeneficio: UIViewController {
         dismiss(animated: true, completion: nil)
         
     }
+    
+    @IBAction func quitarTeclado(_ sender: UITapGestureRecognizer) {
+        
+        view.endEditing(true)
+        
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
 
     /*
     // MARK: - Navigation

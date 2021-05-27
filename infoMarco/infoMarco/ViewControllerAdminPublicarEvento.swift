@@ -32,6 +32,14 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
         // Do any additional setup after loading the view.
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     @IBAction func regresar(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)

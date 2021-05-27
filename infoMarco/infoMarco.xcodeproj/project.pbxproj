@@ -24,10 +24,14 @@
 		5A810AAB262E268400A26010 /* infoMarcoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810AAA262E268400A26010 /* infoMarcoUITests.swift */; };
 		5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */; };
 		5A8F3D79264CA46500D19AA5 /* ViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F3D78264CA46500D19AA5 /* ViewControllerConfig.swift */; };
+		5A98E977265F7CCE00212FC6 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A98E976265F7CCE00212FC6 /* Usuario.swift */; };
 		5A9F6144264B9F7A000FF861 /* ViewControllerNoticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F6143264B9F7A000FF861 /* ViewControllerNoticias.swift */; };
 		5A9F6149264BA03A000FF861 /* ViewControllerRenovacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F6148264BA03A000FF861 /* ViewControllerRenovacion.swift */; };
 		5A9F614E264BA1B1000FF861 /* ViewControllerReservacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F614D264BA1B1000FF861 /* ViewControllerReservacion.swift */; };
 		5AA40AB02651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */; };
+		5AB7126D265F77C200966A7E /* Noticia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7126C265F77C200966A7E /* Noticia.swift */; };
+		5AB71277265F79D600966A7E /* CustomTableViewCellNoticias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB71276265F79D600966A7E /* CustomTableViewCellNoticias.swift */; };
+		5AB71298265F856700966A7E /* CustomTableViewCellNoticiasUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB71297265F856700966A7E /* CustomTableViewCellNoticiasUser.swift */; };
 		5ABA96B126504495004A4D55 /* ViewControllerMembresias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABA96B026504495004A4D55 /* ViewControllerMembresias.swift */; };
 		5ACFAE1E26506B7600AA5CF8 /* ViewControllerAdminEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */; };
 		5AEA4A682651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */; };
@@ -36,6 +40,7 @@
 		941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F6A26311DC600C8018B /* ViewControllerInformacionPersonal.swift */; };
 		941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */; };
 		941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */; };
+		C30E50DA265F5923004DBB95 /* AccesoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30E50D9265F5923004DBB95 /* AccesoViewController.swift */; };
 		C35B2156265BEB0900D719D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35B2155265BEB0900D719D4 /* Assets.xcassets */; };
 		C35B2157265BEB0900D719D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35B2155265BEB0900D719D4 /* Assets.xcassets */; };
 		C35B2158265BEB0900D719D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35B2155265BEB0900D719D4 /* Assets.xcassets */; };
@@ -88,10 +93,14 @@
 		5A810AAC262E268400A26010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A810ABB262E35E500A26010 /* ViewControllerEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEventos.swift; sourceTree = "<group>"; };
 		5A8F3D78264CA46500D19AA5 /* ViewControllerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfig.swift; sourceTree = "<group>"; };
+		5A98E976265F7CCE00212FC6 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		5A9F6143264B9F7A000FF861 /* ViewControllerNoticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNoticias.swift; sourceTree = "<group>"; };
 		5A9F6148264BA03A000FF861 /* ViewControllerRenovacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRenovacion.swift; sourceTree = "<group>"; };
 		5A9F614D264BA1B1000FF861 /* ViewControllerReservacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReservacion.swift; sourceTree = "<group>"; };
 		5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerConfirmacionReservacion.swift; sourceTree = "<group>"; };
+		5AB7126C265F77C200966A7E /* Noticia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticia.swift; sourceTree = "<group>"; };
+		5AB71276265F79D600966A7E /* CustomTableViewCellNoticias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellNoticias.swift; sourceTree = "<group>"; };
+		5AB71297265F856700966A7E /* CustomTableViewCellNoticiasUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellNoticiasUser.swift; sourceTree = "<group>"; };
 		5ABA96B026504495004A4D55 /* ViewControllerMembresias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMembresias.swift; sourceTree = "<group>"; };
 		5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminEventos.swift; sourceTree = "<group>"; };
 		5AEA4A672651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdminPublicarNoticia.swift; sourceTree = "<group>"; };
@@ -102,6 +111,7 @@
 		941B0F7826313D1B00C8018B /* ViewControllerLectorEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLectorEventos.swift; sourceTree = "<group>"; };
 		941B0F7D26313DDD00C8018B /* ViewControllerQRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQRScanner.swift; sourceTree = "<group>"; };
 		C1A8086BF7A7C393B9EE074F /* Pods_infoMarco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_infoMarco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C30E50D9265F5923004DBB95 /* AccesoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccesoViewController.swift; sourceTree = "<group>"; };
 		C35B2155265BEB0900D719D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = infoMarco/Assets.xcassets; sourceTree = "<group>"; };
 		C385F906265A292400D92CFB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C399097D265A20D8001A8166 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -181,16 +191,21 @@
 				5A810A8A262E268300A26010 /* SceneDelegate.swift */,
 				5A810A8C262E268300A26010 /* ViewController.swift */,
 				5A810A8E262E268300A26010 /* Main.storyboard */,
+				5AB71297265F856700966A7E /* CustomTableViewCellNoticiasUser.swift */,
+				5AB71276265F79D600966A7E /* CustomTableViewCellNoticias.swift */,
+				C30E50D9265F5923004DBB95 /* AccesoViewController.swift */,
 				C399097D265A20D8001A8166 /* CustomTableViewCell.swift */,
 				C3EE7FAE265DBA0F00B439CB /* CustomTableViewCellUser.swift */,
 				5AA40AAF2651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift */,
 				5A51EE5C2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift */,
 				5A51EE572650A9EA0051E11B /* ViewControllerAdminNoticiasDetalle.swift */,
 				5A51EE522650A9750051E11B /* ViewControllerAdminNoticias.swift */,
+				5AB7126C265F77C200966A7E /* Noticia.swift */,
 				5A51EE4D2650A29E0051E11B /* ViewControllerAdminPublicarEvento.swift */,
 				5AF79B0A26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift */,
 				5ACFAE1D26506B7600AA5CF8 /* ViewControllerAdminEventos.swift */,
 				C39B38932659CBDE0088E0B1 /* Evento.swift */,
+				5A98E976265F7CCE00212FC6 /* Usuario.swift */,
 				5A2719C8265D89B5002424A2 /* Administrador.swift */,
 				5ABA96B026504495004A4D55 /* ViewControllerMembresias.swift */,
 				5A8F3D78264CA46500D19AA5 /* ViewControllerConfig.swift */,
@@ -427,6 +442,7 @@
 				C3EE7FAF265DBA0F00B439CB /* CustomTableViewCellUser.swift in Sources */,
 				5A51EE5D2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift in Sources */,
 				5ACFAE1E26506B7600AA5CF8 /* ViewControllerAdminEventos.swift in Sources */,
+				5A98E977265F7CCE00212FC6 /* Usuario.swift in Sources */,
 				941B0F7926313D1B00C8018B /* ViewControllerLectorEventos.swift in Sources */,
 				5A51EE622650AF140051E11B /* ViewControllerAdminPromosBeneficiosDetalle.swift in Sources */,
 				5A810A8D262E268300A26010 /* ViewController.swift in Sources */,
@@ -435,10 +451,14 @@
 				5A2719C9265D89B5002424A2 /* Administrador.swift in Sources */,
 				C385F907265A298700D92CFB /* CustomTableViewCell.swift in Sources */,
 				5A9F614E264BA1B1000FF861 /* ViewControllerReservacion.swift in Sources */,
+				C30E50DA265F5923004DBB95 /* AccesoViewController.swift in Sources */,
 				941B0F6B26311DC600C8018B /* ViewControllerInformacionPersonal.swift in Sources */,
 				5A8F3D79264CA46500D19AA5 /* ViewControllerConfig.swift in Sources */,
+				5AB7126D265F77C200966A7E /* Noticia.swift in Sources */,
+				5AB71277265F79D600966A7E /* CustomTableViewCellNoticias.swift in Sources */,
 				5AEA4A682651A7C400FDB010 /* ViewControllerAdminPublicarNoticia.swift in Sources */,
 				5AA40AB02651B06D00E6989B /* ViewControllerConfirmacionReservacion.swift in Sources */,
+				5AB71298265F856700966A7E /* CustomTableViewCellNoticiasUser.swift in Sources */,
 				5A810ABC262E35E500A26010 /* ViewControllerEventos.swift in Sources */,
 				526F9C752630CD7C005567ED /* ViewControllerPromoBeneficios.swift in Sources */,
 				5AF79B0B26508875004D1D4E /* ViewControllerAdminEventosDetalle.swift in Sources */,
