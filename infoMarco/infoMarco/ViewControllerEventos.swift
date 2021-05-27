@@ -15,16 +15,11 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
 
     var ref: DatabaseReference?
     var arrEventos = [Evento]()
-    var usuarioActual : Usuario!
-    
-    var usuario : Usuario!
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        usuarioActual = usuario
         
         ref = Database.database().reference().child("marcoEvent")
         ref?.observe(DataEventType.value, with: {(snapshot) in
@@ -77,17 +72,12 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - Navigation
 
-    // Funcion para mandar datos a las otras vistas
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         let vistaReservaciones = segue.destination as!  ViewControllerReservacion
+         let indice = tableView.indexPathForSelectedRow!
+        vistaReservaciones.unEvento = arrEventos[indice.row]
         
-        if segue.identifier == "Reservacion" {
-            
-            let vistaReservaciones = segue.destination as!  ViewControllerReservacion
-            let indice = tableView.indexPathForSelectedRow!
-            
-            vistaReservaciones.unEvento = arrEventos[indice.row]
-            
-        }
-    }
+        // vistaReservaciones.evento = arrEventos[indice.row]
+     }
 
 }

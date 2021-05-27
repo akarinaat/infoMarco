@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfContrasena: UITextField!
     
-    var ref: DatabaseReference!
+    var ref: DatabaseReference?
     var arrAdmins = [Administrador]()
     var arrMiembros = [Usuario]()
     
@@ -23,14 +23,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // Extraer usuarios administradores de la base de datos
-        Database.database().reference().child("admnUsrs").observeSingleEvent(of: .value, with: {(snapshot) in
+        ref = Database.database().reference().child("admnUsrs")
+        ref?.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount>0{
 
                 for admins in snapshot.children.allObjects as! [DataSnapshot] {
                     
                     let adminObj = admins.value as? [String:String]
                     let adminEmail = adminObj?["correo"]
-
+                    
                     let adminMarco = Administrador(email: adminEmail ?? "")
                 
                     self.arrAdmins.append(adminMarco)
@@ -40,7 +41,6 @@ class ViewController: UIViewController {
         }
         )
         
-                
         // Extraer usuarios miembros de la base de datos
         Database.database().reference().child("memberUsrs").observeSingleEvent(of: .value, with: {(snapshot) in
             if snapshot.childrenCount>0{
@@ -73,7 +73,6 @@ class ViewController: UIViewController {
             }
         }
         )
-        
     }
     
     // Funcion para validar que los tf tengan datos y que el tf de correo tenga el formato correcto
@@ -129,11 +128,10 @@ class ViewController: UIViewController {
         return nil
         
     }
-    
+
     func findAdmin (email: String) -> Bool {
         
         for admin in arrAdmins {
-            
             if admin.email == email {
                 
                 return true
@@ -167,7 +165,6 @@ class ViewController: UIViewController {
                     if let result = result, error == nil {
                         
                         // Guardar usuario en user defaults
-                        
                         let usr = self.findUser()
                         
                         // Verificar que el usuario existe en el segundo registro
@@ -242,4 +239,3 @@ class ViewController: UIViewController {
     }
     
 }
-

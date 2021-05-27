@@ -14,7 +14,6 @@ class ViewControllerInformacionPersonal: UIViewController {
     @IBOutlet weak var lbMiembroDesde: UILabel!
     @IBOutlet weak var lbTipoMemb: UILabel!
     @IBOutlet weak var lbFechaRenov: UILabel!
-    //var usuarioActual : Usuario!
     
     var usuario : Usuario!
     
@@ -22,14 +21,6 @@ class ViewControllerInformacionPersonal: UIViewController {
         super.viewDidLoad()
         
         cargaUsuario()
-        
-        /*usuarioActual = usuario
-        
-        lbNombre.text = usuarioActual.sNombres + usuarioActual.sApellidos
-        lbMiembroDesde.text = usuarioActual.sMiembro_Desde
-        lbTipoMemb.text = usuarioActual.sCategoria
-        lbFechaRenov.text = usuarioActual.sFecha_Ven*/
-        
         generarQRCode()
         
     }
