@@ -31,6 +31,14 @@ class ViewControllerAdminEventosDetalle: UIViewController, UIImagePickerControll
         
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     @IBAction func botonGuardar(_ sender: UIButton) {
         
         unEvento.titulo = lbTitulo.text!

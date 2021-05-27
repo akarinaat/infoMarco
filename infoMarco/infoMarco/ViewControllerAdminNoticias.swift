@@ -42,6 +42,14 @@ class ViewControllerAdminNoticias: UIViewController, UITableViewDelegate, UITabl
              )
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     // MARK: Metodos del Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
