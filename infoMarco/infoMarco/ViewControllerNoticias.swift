@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseDatabase
+
 import FirebaseStorage
 import FirebaseFirestore
 import Kingfisher
@@ -59,7 +60,7 @@ class ViewControllerNoticias: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
           
-        let cell = tableViewNoticias.dequeueReusableCell(withIdentifier: "celdaNoticias", for: indexPath) as! CustomTableViewCellNoticias
+        let cell = tableViewNoticias.dequeueReusableCell(withIdentifier: "celdaNoticias", for: indexPath) as! CustomTableViewCellNoticiasUser
         cell.lbTitulo.text = arrNoticias[indexPath.row].titulo
         cell.lbFecha.text = arrNoticias[indexPath.row].fecha
         cell.tvContenido.text = arrNoticias[indexPath.row].contenido
