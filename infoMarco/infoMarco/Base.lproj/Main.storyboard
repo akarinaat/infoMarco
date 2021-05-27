@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sEe-TR-Fbm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -378,10 +378,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Info. Personal" image="person" catalog="system" id="2rK-FM-zxA"/>
                     <connections>
-                        <outlet property="lbFechaRenov" destination="C0q-N0-IKB" id="SqY-eD-mK2"/>
-                        <outlet property="lbMiembroDesde" destination="BmR-HB-77b" id="tzM-Id-Zc0"/>
-                        <outlet property="lbNombre" destination="lOP-5k-PRk" id="TdE-H8-C2u"/>
-                        <outlet property="lbTipoMemb" destination="f83-RH-oCt" id="HYz-hP-5rS"/>
                         <outlet property="qrCodeImage" destination="zpF-5q-ahH" id="Rzg-E6-Bje"/>
                     </connections>
                 </viewController>
@@ -1222,7 +1218,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jai-9N-1l4">
-                                <rect key="frame" x="59" y="304" width="297" height="220"/>
+                                <rect key="frame" x="59" y="360" width="297" height="164"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1280,7 +1276,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1295.2" y="-852.3238380809596"/>
+            <point key="canvasLocation" x="-1295.6521739130435" y="-852.45535714285711"/>
         </scene>
         <!--Eventos-->
         <scene sceneID="COM-PD-QtC">

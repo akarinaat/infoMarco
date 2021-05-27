@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     
     var ref: DatabaseReference?
     var arrAdmins = [Administrador]()
-    var arrMiembros = [Usuario]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,39 +35,6 @@ class ViewController: UIViewController {
                 
                     self.arrAdmins.append(adminMarco)
                     
-                }
-            }
-        }
-        )
-        
-        // Extraer usuarios miembros de la base de datos
-        Database.database().reference().child("memberUsrs").observeSingleEvent(of: .value, with: {(snapshot) in
-            if snapshot.childrenCount>0{
-                for miembros in snapshot.children.allObjects as! [DataSnapshot] {
-
-                    let miembroObj = miembros.value as? [String:Any]
-                    
-                    let mApellidos = miembroObj?["apellidos"]
-                    let mCategoria = miembroObj?["categoria"]
-                    let mEmail = miembroObj?["email"]
-                    let mFecha_Ing = miembroObj?["fecha_ing"]
-                    let mFecha_Ven = miembroObj?["fecha_ven"]
-                    let mID_CAT = miembroObj?["id_cat"]
-                    let mID_Miembro = miembroObj?["id_miembro"]
-                    let mMiembro_Desde = miembroObj?["miembro_desde"]
-                    let mNombres = miembroObj?["nombres"]
-
-                    let miembroMarco = Usuario(ID_Miembro: mID_Miembro as? String ?? "",
-                                               ID_CAT: mID_CAT as? String ?? "",
-                                               sNombres: mNombres as? String ?? "",
-                                               sApellidos: mApellidos as? String ?? "",
-                                               sCategoria: mCategoria as? String ?? "",
-                                               sEmail: mEmail as? String ?? "",
-                                               sFecha_Ing: mFecha_Ing as? String ?? "",
-                                               sMiembro_Desde: mMiembro_Desde as? String ?? "",
-                                               sFecha_Ven: mFecha_Ven as? String ?? "")
-                                    
-                    self.arrMiembros.append(miembroMarco)
                 }
             }
         }
@@ -115,23 +81,10 @@ class ViewController: UIViewController {
         }
     }
     
-    func findUser() -> Usuario! {
-        
-        for miembro in arrMiembros {
-            if miembro.sEmail == tfEmail.text! {
-                
-                return miembro
-                
-            }
-        }
-        
-        return nil
-        
-    }
-
     func findAdmin (email: String) -> Bool {
         
         for admin in arrAdmins {
+            
             if admin.email == email {
                 
                 return true
@@ -163,36 +116,11 @@ class ViewController: UIViewController {
                     (result, error) in
                 
                     if let result = result, error == nil {
+                        //para que guarde los datos de usuario
+                        self.guardarDatosUsuario(user: correo, pass: contras)
                         
-                        // Guardar usuario en user defaults
-                        let usr = self.findUser()
-                        
-                        // Verificar que el usuario existe en el segundo registro
-                        if usr != nil {
-                        
-                            // Guardar la info del usuario en user defaults
-                            let defaults = UserDefaults.standard
-                            
-                            let nombreCompleto = usr!.sNombres + " " + usr!.sApellidos
-                            
-                            defaults.setValue(nombreCompleto, forKey: "NombreCompleto")
-                            defaults.set(usr!.sMiembro_Desde, forKey: "MiembroDesde")
-                            defaults.set(usr!.sCategoria, forKey: "TipoMemb")
-                            defaults.set(usr!.sFecha_Ven, forKey: "FechaRenov")
-                            
-                            // Ejecutar segue para el usuario
-                            self.performSegue(withIdentifier: "LogIn", sender: self)
-                            
-                        } else {
-                            
-                            // Crear y desplegar alerta
-                            let alerta = UIAlertController(title: "ERROR", message: "Correo inexistente o contraseña incorrecta", preferredStyle: .alert)
-                            let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                            
-                            alerta.addAction(accion)
-                            self.present(alerta, animated: true, completion: nil)
-                            
-                        }
+                        // Ejecutar segue para el usuario
+                        self.performSegue(withIdentifier: "LogIn", sender: self)
                         
                     } else {
                         
@@ -238,4 +166,15 @@ class ViewController: UIViewController {
         }
     }
     
+    func guardarDatosUsuario (user: String, pass: String) {
+        
+        let defaults = UserDefaults.standard
+        
+        defaults.setValue(user, forKey: "user")
+        defaults.setValue(pass, forKey: "password")
+        
+    }
+    
+    
 }
+

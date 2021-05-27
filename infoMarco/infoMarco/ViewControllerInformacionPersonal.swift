@@ -10,37 +10,11 @@ import UIKit
 class ViewControllerInformacionPersonal: UIViewController {
 
     @IBOutlet weak var qrCodeImage: UIImageView!
-    @IBOutlet weak var lbNombre: UILabel!
-    @IBOutlet weak var lbMiembroDesde: UILabel!
-    @IBOutlet weak var lbTipoMemb: UILabel!
-    @IBOutlet weak var lbFechaRenov: UILabel!
-    
-    var usuario : Usuario!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cargaUsuario()
         generarQRCode()
-        
-    }
-    
-    func cargaUsuario(){
-        
-        let defaults = UserDefaults.standard
-        
-        if let nombre = defaults.value(forKey: "NombreCompleto") as? String {
-            lbNombre.text = nombre
-        }
-        if let miembroDesde = defaults.value(forKey: "MiembroDesde") as? String {
-            lbMiembroDesde.text = miembroDesde
-        }
-        if let tipoMemb = defaults.value(forKey: "TipoMemb") as? String {
-            lbTipoMemb.text = tipoMemb
-        }
-        if let fechaRenov = defaults.value(forKey: "FechaRenov") as? String {
-            lbFechaRenov.text = fechaRenov
-        }
         
     }
     
