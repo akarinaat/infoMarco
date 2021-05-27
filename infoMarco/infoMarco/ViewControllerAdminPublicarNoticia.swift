@@ -33,6 +33,14 @@ class ViewControllerAdminPublicarNoticia: UIViewController, UINavigationControll
         
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     @IBAction func quitaTeclado(_ sender: UITapGestureRecognizer) {
         
         view.endEditing(true)

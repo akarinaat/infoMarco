@@ -75,6 +75,14 @@ class ViewController: UIViewController {
         )
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     // Funcion para validar que los tf tengan datos y que el tf de correo tenga el formato correcto
     func validarCorreoContra(email : String, contra : String) -> Bool {
         
