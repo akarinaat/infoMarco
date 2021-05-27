@@ -61,6 +61,8 @@ class ViewController: UIViewController {
                     let mNombres = miembroObj?["Nombres"]
                     
                     let miembroMarco = Usuario(ID_Miembro: mID_Miembro ?? "", ID_CAT: mID_CAT ?? "", sNombres: mNombres ?? "", sApellidos: mApellidos ?? "", sCategoria: mCategoria ?? "", sEmail: mEmail ?? "", sFecha_Ing: mFecha_Ing ?? "", sMiembro_Desde: mMiembro_Desde ?? "", sFecha_Ven: mFecha_Ven ?? "")
+                    
+                    print(miembroMarco.sNombres)
                 
                     self.arrMiembros.append(miembroMarco)
                     
