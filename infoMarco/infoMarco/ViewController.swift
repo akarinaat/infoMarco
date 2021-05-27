@@ -116,6 +116,8 @@ class ViewController: UIViewController {
                     (result, error) in
                 
                     if let result = result, error == nil {
+                        //para que guarde los datos de usuario
+                        self.guardarDatosUsuario(user: correo, pass: contras)
                         
                         // Ejecutar segue para el usuario
                         self.performSegue(withIdentifier: "LogIn", sender: self)
@@ -162,6 +164,15 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func guardarDatosUsuario (user: String, pass: String) {
+        
+        let defaults = UserDefaults.standard
+        
+        defaults.setValue(user, forKey: "user")
+        defaults.setValue(pass, forKey: "password")
+        
     }
     
     

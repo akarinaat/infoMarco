@@ -6,18 +6,18 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewControllerConfirmacionReservacion: UIViewController {
 
     var boletos: String!
     var nombreEvento: String!
     var horario: String!
+    let database = Database.database().reference()
     
     @IBOutlet weak var lbNoBletos: UILabel!
     @IBOutlet weak var lbNombreEvento: UILabel!
-    
     @IBOutlet weak var lbHorario: UILabel!
-    
     @IBOutlet weak var imagenQR: UIImageView!
     
     
@@ -41,12 +41,13 @@ class ViewControllerConfirmacionReservacion: UIViewController {
     
     
     @IBAction func confirmarGenerarQR(_ sender: UIButton) {
-        let evT = lbNombreEvento.text!
-        let evH = lbHorario.text!
-        let evB = lbNoBletos.text!
-        print("Nombre evento: \(evT)\nHorario: \(evH)\nNo.Boletos\(evB)")
-       let confString = "CONFIRMADO, GRACIAS POR SU COMPRA"
-        imagenQR.image = generarCodigoQR(Name: confString)
+        let defaults = UserDefaults.standard
+        let confString = defaults.value(forKey: "user") as? String
+        imagenQR.image = generarCodigoQR(Name: confString!)
+        if let nomEvento = lbNombreEvento.text, let user = defaults.value(forKey: "user") as? String, let numBoletos = lbNoBletos.text{
+            let object : [String: Any] = ["userID": user, "eventID": nomEvento, "numBoletosRequeridos": numBoletos]
+            self.database.child("reservaciones").childByAutoId().setValue(object)
+        }
         
     }
     
