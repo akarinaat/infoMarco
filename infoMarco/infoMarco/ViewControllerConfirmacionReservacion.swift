@@ -13,6 +13,7 @@ class ViewControllerConfirmacionReservacion: UIViewController {
     var boletos: String!
     var nombreEvento: String!
     var horario: String!
+    var qrString: String!
     let database = Database.database().reference()
     
     @IBOutlet weak var lbNoBletos: UILabel!
@@ -42,11 +43,13 @@ class ViewControllerConfirmacionReservacion: UIViewController {
     
     @IBAction func confirmarGenerarQR(_ sender: UIButton) {
         let defaults = UserDefaults.standard
-        let confString = defaults.value(forKey: "user") as? String
-        imagenQR.image = generarCodigoQR(Name: confString!)
         if let nomEvento = lbNombreEvento.text, let user = defaults.value(forKey: "user") as? String, let numBoletos = lbNoBletos.text{
             let object : [String: Any] = ["userID": user, "eventID": nomEvento, "numBoletosRequeridos": numBoletos]
-            self.database.child("reservaciones").childByAutoId().setValue(object)
+            let reference = self.database.child("reservaciones").childByAutoId()
+            reference.setValue(object)
+            self.qrString = reference.key
+            print(qrString!)
+            imagenQR.image = generarCodigoQR(Name: qrString!)
         }
         
     }
