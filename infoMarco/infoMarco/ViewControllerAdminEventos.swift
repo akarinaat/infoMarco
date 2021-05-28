@@ -72,7 +72,7 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 219
+        return 170
     }
 
     // MARK: - Navigation
