@@ -51,6 +51,7 @@
 		C385F907265A298700D92CFB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C385F906265A292400D92CFB /* CustomTableViewCell.swift */; };
 		C399097E265A20D8001A8166 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C399097D265A20D8001A8166 /* CustomTableViewCell.swift */; };
 		C39B38942659CBDE0088E0B1 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B38932659CBDE0088E0B1 /* Evento.swift */; };
+		C3AD39EC2664A1A50036C68F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD39EB2664A1A50036C68F /* CustomTabBarController.swift */; };
 		C3EE7FAF265DBA0F00B439CB /* CustomTableViewCellUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EE7FAE265DBA0F00B439CB /* CustomTableViewCellUser.swift */; };
 		D1E6D997F0999EAF5BCDF4EF /* Pods_infoMarco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A8086BF7A7C393B9EE074F /* Pods_infoMarco.framework */; };
 /* End PBXBuildFile section */
@@ -125,6 +126,7 @@
 		C399097D265A20D8001A8166 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C39B38932659CBDE0088E0B1 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		C39B38952659CC2B0088E0B1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		C3AD39EB2664A1A50036C68F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTabBarController.swift; path = infoMarco/CustomTabBarController.swift; sourceTree = "<group>"; };
 		C3EE7FAE265DBA0F00B439CB /* CustomTableViewCellUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 		5A810A7C262E268300A26010 = {
 			isa = PBXGroup;
 			children = (
+				C3AD39EB2664A1A50036C68F /* CustomTabBarController.swift */,
 				5A810A87262E268300A26010 /* infoMarco */,
 				5A810A9E262E268400A26010 /* infoMarcoTests */,
 				5A810AA9262E268400A26010 /* infoMarcoUITests */,
@@ -453,6 +456,7 @@
 				5AEA4A6D2651A8FA00FDB010 /* ViewControllerAdminPublicarPromoBeneficio.swift in Sources */,
 				941B0F7E26313DDD00C8018B /* ViewControllerQRScanner.swift in Sources */,
 				C3EE7FAF265DBA0F00B439CB /* CustomTableViewCellUser.swift in Sources */,
+				C3AD39EC2664A1A50036C68F /* CustomTabBarController.swift in Sources */,
 				5A51EE5D2650AC2B0051E11B /* ViewControllerAdminPromoBeneficios.swift in Sources */,
 				5ACFAE1E26506B7600AA5CF8 /* ViewControllerAdminEventos.swift in Sources */,
 				5A98E977265F7CCE00212FC6 /* Usuario.swift in Sources */,
