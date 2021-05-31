@@ -73,15 +73,6 @@ class ViewController: UIViewController {
             }
         })
         
-        let defults = UserDefaults.standard
-        if let user = defults.value(forKey: "user") as? String, let password = defults.value(forKey: "password") as? String {
-            let userString = user
-            let passwordString = password
-            print(userString)
-            print(passwordString)
-            AutoLogin(user: userString, password: passwordString)
-        }
-        
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -277,101 +268,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    func AutoLogin(user:String, password:String){
-        
-        let correo = user                  // String con el correo del usuario (admin)
-        let contras = password            // Strong con la contra del usuario (admin)
-
-        // Verificar si el correo introducido es de un administrador
-        if !findAdmin(email: correo) {
-            
-            // Validar formato de correo
-            if validarCorreoContra(email: correo, contra: contras){
-                    
-                
-                // Autenticar cuenta del usuario
-                Auth.auth().signIn(withEmail: correo, password: contras) {
-                    (result, error) in
-                
-                    if let result = result, error == nil {
-                        
-                        // Guardar usuario en user defaults
-                        let usr = self.findUserAuto(user : correo)
-                        
-                        // Verificar que el usuario existe en el segundo registro
-                        if usr != nil {
-                        
-                            // Guardar la info del usuario en user defaults
-                            let defaults = UserDefaults.standard
-                            
-                            let nombreCompleto = usr!.sNombres + " " + usr!.sApellidos
-                            defaults.set(self.tfEmail.text!, forKey: "user")
-                            defaults.set(self.tfContrasena.text!, forKey: "password")
-                            defaults.setValue(nombreCompleto, forKey: "NombreCompleto")
-                            defaults.set(usr!.sMiembro_Desde, forKey: "MiembroDesde")
-                            defaults.set(usr!.sCategoria, forKey: "TipoMemb")
-                            defaults.set(usr!.sFecha_Ven, forKey: "FechaRenov")
-                            
-                            // Ejecutar segue para el usuario
-                            self.performSegue(withIdentifier: "LogIn", sender: self)
-                            
-                        } else {
-                            
-                            // Crear y desplegar alerta
-                            let alerta = UIAlertController(title: "ERROR", message: "Correo inexistente o contraseña incorrecta", preferredStyle: .alert)
-                            let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                            
-                            alerta.addAction(accion)
-                            self.present(alerta, animated: true, completion: nil)
-                            
-                        }
-                            
-                    } else {
-                        
-                        // Crear y desplegar alerta
-                        let alerta = UIAlertController(title: "ERROR", message: "Correo inexistente o contraseña incorrecta", preferredStyle: .alert)
-                        let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                        
-                        alerta.addAction(accion)
-                        self.present(alerta, animated: true, completion: nil)
-                        
-                    }
-                }
-                
-            }
-            
-        } else {
-            
-            // Validar formato de correo
-            if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
-                
-                // Autenticar cuenta del usuario admin
-                Auth.auth().signIn(withEmail: correo, password: contras) {
-                    (result, error) in
-                    
-                    if let result = result, error == nil {
-                        let defaults = UserDefaults.standard
-                        defaults.set(self.tfEmail.text!, forKey: "user")
-                        defaults.set(self.tfContrasena.text!, forKey: "password")
-                        // Ejecutar segue para el usuario admin
-                        self.performSegue(withIdentifier: "LogInAdmin", sender: self)
-
-                    } else {
-                        
-                        // Crear y desplegar alerta
-                        let alerta = UIAlertController(title: "ERROR", message: "Correo inexistente o contraseña incorrecta", preferredStyle: .alert)
-                        let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                        
-                        alerta.addAction(accion)
-                        self.present(alerta, animated: true, completion: nil)
-                        
-                    }
-                }
-            }
-        }
-        
     }
     
 }
