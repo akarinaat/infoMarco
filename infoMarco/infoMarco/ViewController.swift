@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var ref: DatabaseReference?
     var arrAdmins = [Administrador]()
     var arrMiembros = [Usuario]()
+    var loggedOut = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -253,6 +254,15 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func unwindToLogOut(_ unwindSegue: UIStoryboardSegue) {
+        //let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+        loggedOut = false
+        tfEmail.text = ""
+        tfContrasena.text = ""
+        
     }
     
 }

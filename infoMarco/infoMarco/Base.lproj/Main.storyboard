@@ -374,17 +374,29 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9S-Ug-RE1">
                                 <rect key="frame" x="0.0" y="345" width="375" height="273"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zpF-5q-ahH">
-                                        <rect key="frame" x="120" y="0.0" width="138" height="130"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zpF-5q-ahH">
+                                        <rect key="frame" x="231" y="5" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="PXu-Ba-d68"/>
                                             <constraint firstAttribute="height" constant="120" id="xIX-Js-T3J"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ty-3y-gZv">
+                                        <rect key="frame" x="0.0" y="125" width="375" height="148"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="LOG OUT"/>
+                                        <connections>
+                                            <segue destination="qL4-yR-PYj" kind="unwind" unwindAction="unwindToLogOut:" id="B8K-Lc-5oJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="1ty-3y-gZv" firstAttribute="leading" secondItem="p9S-Ug-RE1" secondAttribute="leading" id="0Nv-dM-SuK"/>
                                     <constraint firstAttribute="trailing" secondItem="zpF-5q-ahH" secondAttribute="trailing" constant="24" id="1Ih-xD-0WK"/>
+                                    <constraint firstItem="1ty-3y-gZv" firstAttribute="top" secondItem="zpF-5q-ahH" secondAttribute="bottom" id="4fj-p4-q1t"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ty-3y-gZv" secondAttribute="trailing" id="GB7-Zv-vaK"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ty-3y-gZv" secondAttribute="bottom" id="HLq-rM-IzU"/>
                                     <constraint firstItem="zpF-5q-ahH" firstAttribute="top" secondItem="p9S-Ug-RE1" secondAttribute="top" constant="5" id="ukR-IV-EMH"/>
                                 </constraints>
                             </view>
@@ -413,6 +425,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0N-xj-ykd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qL4-yR-PYj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="692" y="668.81559220389806"/>
         </scene>
@@ -2467,6 +2480,84 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-4030" y="670"/>
+        </scene>
+        <!--Promociones-->
+        <scene sceneID="QMl-ke-18f">
+            <objects>
+                <viewController id="bUf-54-daK" customClass="ViewControllerAdminPromoBeneficios" customModule="infoMarco" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nEd-Ok-DiW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r1s-JJ-kok">
+                                <rect key="frame" x="0.0" y="152.5" width="375" height="514.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.95659333469999996" green="0.92971223589999996" blue="0.90588676930000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaPromosBeneficiosAdmin" rowHeight="55" id="gsT-xI-0Hz">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gsT-xI-0Hz" id="nhh-zt-nca">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bUf-54-daK" id="uyA-ea-z6O"/>
+                                    <outlet property="delegate" destination="bUf-54-daK" id="Uy8-Od-4MI"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROMOS Y BENEFICIOS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPS-H0-aAT">
+                                <rect key="frame" x="87.5" y="20" width="200" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="7AF-Wx-bAw"/>
+                                    <constraint firstAttribute="width" constant="200" id="TOr-ep-v2C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTV-vF-Prg">
+                                <rect key="frame" x="0.0" y="118.5" width="375" height="34"/>
+                                <color key="backgroundColor" red="0.80964467009999996" green="0.74292264200000002" blue="0.69599420430000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Conoce las membresias! (Tap aqui)"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modo Admin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxA-oq-9e5">
+                                <rect key="frame" x="139.5" y="93" width="96.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92416697739999998" green="0.0" blue="0.60787332059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxB-nH-xJE">
+                                <rect key="frame" x="5" y="10" width="76" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Agregar"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="erk-TT-BuK"/>
+                        <color key="backgroundColor" red="0.99198764559999997" green="0.9090172648" blue="0.85241824389999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aPS-H0-aAT" firstAttribute="centerX" secondItem="nEd-Ok-DiW" secondAttribute="centerX" id="2QZ-qL-tPf"/>
+                            <constraint firstItem="fxB-nH-xJE" firstAttribute="top" secondItem="erk-TT-BuK" secondAttribute="top" constant="10" id="2zC-YH-BoJ"/>
+                            <constraint firstItem="r1s-JJ-kok" firstAttribute="leading" secondItem="erk-TT-BuK" secondAttribute="leading" id="3Vk-YB-9lM"/>
+                            <constraint firstItem="NxA-oq-9e5" firstAttribute="centerX" secondItem="nEd-Ok-DiW" secondAttribute="centerX" id="4lW-g2-LUz"/>
+                            <constraint firstItem="hTV-vF-Prg" firstAttribute="top" secondItem="NxA-oq-9e5" secondAttribute="bottom" constant="5" id="Cq6-vd-2Vv"/>
+                            <constraint firstItem="hTV-vF-Prg" firstAttribute="leading" secondItem="erk-TT-BuK" secondAttribute="leading" id="PCr-2e-Vge"/>
+                            <constraint firstAttribute="trailing" secondItem="hTV-vF-Prg" secondAttribute="trailing" id="PWc-ss-rUr"/>
+                            <constraint firstItem="r1s-JJ-kok" firstAttribute="top" secondItem="hTV-vF-Prg" secondAttribute="bottom" id="Tmr-3m-Lqk"/>
+                            <constraint firstItem="NxA-oq-9e5" firstAttribute="top" secondItem="aPS-H0-aAT" secondAttribute="bottom" constant="5" id="aLW-gY-Ypi"/>
+                            <constraint firstItem="aPS-H0-aAT" firstAttribute="top" secondItem="erk-TT-BuK" secondAttribute="top" constant="20" id="jFg-xD-QC3"/>
+                            <constraint firstAttribute="trailing" secondItem="r1s-JJ-kok" secondAttribute="trailing" id="nIz-22-rtD"/>
+                            <constraint firstItem="fxB-nH-xJE" firstAttribute="leading" secondItem="erk-TT-BuK" secondAttribute="leading" constant="5" id="ohb-Tk-7Dk"/>
+                            <constraint firstAttribute="bottom" secondItem="r1s-JJ-kok" secondAttribute="bottom" id="pKe-DG-Cng"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Promociones" image="tag" catalog="system" id="ROV-7H-BFf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ExT-pq-GlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1420" y="710"/>
         </scene>
     </scenes>
     <resources>
