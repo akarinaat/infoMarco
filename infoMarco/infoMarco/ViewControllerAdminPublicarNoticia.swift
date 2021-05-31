@@ -50,12 +50,12 @@ class ViewControllerAdminPublicarNoticia: UIViewController, UINavigationControll
     
     
     @IBAction func botonPublicarNoticia(_ sender: Any) {
-        
-                if let titulo = self.tfTitulo.text, let contenido = self.tfContenido.text, let fecha = self.tfFecha.text {
-                    let object: [String: Any] = ["titulo": titulo, "fecha": fecha, "contenido": contenido]
-                    self.database.child("Noticias").childByAutoId().setValue(object)
+        if let titulo = self.tfTitulo.text, let contenido = self.tfContenido.text, let fecha = self.tfFecha.text {
+            let object: [String: Any] = ["titulo": titulo, "fecha": fecha, "contenido": contenido]
+            self.database.child("Noticias").childByAutoId().setValue(object)
                     
-                }
+        }
+        dismiss(animated: true, completion: nil)
     }
    
 }

@@ -27,6 +27,7 @@ class ViewControllerAdminNoticias: UIViewController, UITableViewDelegate, UITabl
         ref = Database.database().reference().child("Noticias")
         ref?.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount>=0{
+                self.arrNoticias.removeAll(keepingCapacity: false)
                 for noticias in snapshot.children.allObjects as! [DataSnapshot] {
                     let noticiaObj = noticias.value as? [String:String]
                     let noticiaTitulo = noticiaObj?["titulo"]
@@ -57,7 +58,7 @@ class ViewControllerAdminNoticias: UIViewController, UITableViewDelegate, UITabl
         return arrNoticias.count
             }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return 211
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

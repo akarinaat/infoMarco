@@ -59,6 +59,7 @@ class ViewControllerAdminPublicarPromoBeneficio: UIViewController,UINavigationCo
             self.database.child("Promociones").childByAutoId().setValue(object)
             
         }
+        dismiss(animated: true, completion: nil)
     }
     
 

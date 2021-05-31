@@ -193,7 +193,7 @@ class ViewController: UIViewController {
                             let nombreCompleto = usr!.sNombres + " " + usr!.sApellidos
                             
                             defaults.setValue(nombreCompleto, forKey: "NombreCompleto")
-                            defaults.set(usr!.sEmail, forKey: "user")
+                            defaults.setValue(usr!.sEmail, forKey: "user")
                             defaults.set(usr!.sMiembro_Desde, forKey: "MiembroDesde")
                             defaults.set(usr!.sCategoria, forKey: "TipoMemb")
                             defaults.set(usr!.sFecha_Ven, forKey: "FechaRenov")

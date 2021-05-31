@@ -13,7 +13,7 @@ import Kingfisher
 
 class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITableViewDataSource, protocoloAgregaEvento, protocoloActualizasEvento {
     
-    var ref: DatabaseReference?
+    var ref1: DatabaseReference?
     var listaEventos = [Evento]()
     
     @IBOutlet weak var tableViewEventos: UITableView!
@@ -21,9 +21,10 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ref = Database.database().reference().child("marcoEvent")
-        ref?.observe(DataEventType.value, with: {(snapshot) in
+        ref1 = Database.database().reference().child("marcoEvent")
+        ref1?.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount>=0{
+                self.listaEventos.removeAll(keepingCapacity: false)
                 for events in snapshot.children.allObjects as! [DataSnapshot] {
                     let eventObj = events.value as? [String:String]
                     let eventoTitulo = eventObj?["titulo"]
@@ -72,7 +73,7 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 219
     }
 
     // MARK: - Navigation
@@ -97,12 +98,9 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
         // arreglar pq esto edita directamente la table view
         // se debe editar la base de datos y despues actualizar
         // la table view
-        
-        /*
         listaEventos.append(ev)
-        counter += 
         tableViewEventos.reloadData()
-         */
+        
     }
     
     // MARK: - Metodos del protocolo Actualiza Evento
