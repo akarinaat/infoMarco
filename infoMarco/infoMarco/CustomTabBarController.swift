@@ -1,30 +1,18 @@
 //
-//  ViewControllerAdminPublicarPromoBeneficio.swift
+//  CustomTabBarController.swift
 //  infoMarco
 //
-//  Created by user188713 on 5/16/21.
+//  Created by Gerardo Ángeles Hernández on 30/05/21.
 //
 
 import UIKit
 
-class ViewControllerAdminPublicarPromoBeneficio: UIViewController {
+class CustomTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func regresar(_ sender: Any) {
-        
-        dismiss(animated: true, completion: nil)
-        
-    }
-    
-    @IBAction func quitarTeclado(_ sender: UITapGestureRecognizer) {
-        
-        view.endEditing(true)
-        
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -34,13 +22,7 @@ class ViewControllerAdminPublicarPromoBeneficio: UIViewController {
     override var shouldAutorotate: Bool {
         return false
     }
-    
-    @IBAction func pressPublicar(_ sender: UIButton) {
-        
-        dismiss(animated: true, completion: nil)
-        
-    }
-    
+
     /*
     // MARK: - Navigation
 
