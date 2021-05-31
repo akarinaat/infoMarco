@@ -6,8 +6,26 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
+import FirebaseFirestore
+import Kingfisher
 
-class ViewControllerAdminPublicarPromoBeneficio: UIViewController {
+protocol protocoloAgregaPromocion {
+    func agregarPromocion (not: Promo)
+}
+
+class ViewControllerAdminPublicarPromoBeneficio: UIViewController,UINavigationControllerDelegate {
+    
+//    OUTLETS DE VIEW
+    
+    @IBOutlet weak var tfTitulo: UITextField!
+    @IBOutlet weak var tvContenido: UITextView!
+    //    OUTLETS
+    
+    
+    var delegado : protocoloAgregaPromocion!
+    let database = Database.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +51,14 @@ class ViewControllerAdminPublicarPromoBeneficio: UIViewController {
     
     override var shouldAutorotate: Bool {
         return false
+    }
+    
+    @IBAction func botonPublicarPromocion(_sender: Any){
+        if let titulo = self.tfTitulo.text, let contenido = self.tvContenido.text {
+            let object: [String: Any] = ["titulo": titulo, "contenido": contenido]
+            self.database.child("Promociones").childByAutoId().setValue(object)
+            
+        }
     }
     
 
