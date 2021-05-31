@@ -43,8 +43,17 @@ class ViewControllerMembresias: UIViewController {
             diamondView.backgroundColor = #colorLiteral(red: 0.5860883142, green: 1, blue: 0.5936284157, alpha: 1)
         default:
             break
-        }    }
+        }
+        
+    }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
 
     /*
     // MARK: - Navigation

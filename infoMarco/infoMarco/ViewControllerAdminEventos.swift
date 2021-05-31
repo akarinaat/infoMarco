@@ -48,6 +48,14 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
         
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventosAdmin", for: indexPath) as! CustomTableViewCell
@@ -64,7 +72,7 @@ class ViewControllerAdminEventos: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 219
+        return 170
     }
 
     // MARK: - Navigation

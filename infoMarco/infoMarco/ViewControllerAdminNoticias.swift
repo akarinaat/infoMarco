@@ -42,6 +42,14 @@ class ViewControllerAdminNoticias: UIViewController, UITableViewDelegate, UITabl
              )
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     // MARK: Metodos del Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +57,7 @@ class ViewControllerAdminNoticias: UIViewController, UITableViewDelegate, UITabl
         return arrNoticias.count
             }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 219
+        return 140
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
