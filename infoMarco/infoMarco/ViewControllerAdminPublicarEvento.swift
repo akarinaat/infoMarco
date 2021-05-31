@@ -104,8 +104,6 @@ class ViewControllerAdminPublicarEvento: UIViewController, UIImagePickerControll
             }
         }
         
-        dismiss(animated: true, completion: nil)
-        
     }
         
 //         esto tiene que ver con el uso de los tables view

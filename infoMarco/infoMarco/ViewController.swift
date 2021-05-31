@@ -71,8 +71,8 @@ class ViewController: UIViewController {
                     self.arrMiembros.append(miembroMarco)
                 }
             }
-        })
-        
+        }
+        )
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -124,20 +124,6 @@ class ViewController: UIViewController {
     }
     
     func findUser() -> Usuario! {
-        
-        for miembro in arrMiembros {
-            if miembro.sEmail == tfEmail.text! {
-                
-                return miembro
-                
-            }
-        }
-        
-        return nil
-        
-    }
-    
-    func findUserAuto(user:String) -> Usuario! {
         
         for miembro in arrMiembros {
             if miembro.sEmail == tfEmail.text! {
@@ -204,13 +190,13 @@ class ViewController: UIViewController {
                             let defaults = UserDefaults.standard
                             
                             let nombreCompleto = usr!.sNombres + " " + usr!.sApellidos
-                            //este lo uso para crear confirmacion de eventos
-                            defaults.setValue(self.tfEmail.text!, forKey: "user")
-                            defaults.setValue(self.tfContrasena.text!, forKey: "password")
+                            
                             defaults.setValue(nombreCompleto, forKey: "NombreCompleto")
+                            defaults.set(usr!.sEmail, forKey: "user")
                             defaults.set(usr!.sMiembro_Desde, forKey: "MiembroDesde")
                             defaults.set(usr!.sCategoria, forKey: "TipoMemb")
                             defaults.set(usr!.sFecha_Ven, forKey: "FechaRenov")
+                            
                             // Ejecutar segue para el usuario
                             self.performSegue(withIdentifier: "LogIn", sender: self)
                             
@@ -244,14 +230,13 @@ class ViewController: UIViewController {
             // Validar formato de correo
             if validarCorreoContra(email: tfEmail.text!, contra: tfContrasena.text!){
                 
+            
                 // Autenticar cuenta del usuario admin
                 Auth.auth().signIn(withEmail: correo, password: contras) {
                     (result, error) in
                     
                     if let result = result, error == nil {
-                        let defaults = UserDefaults.standard
-                        defaults.setValue(self.tfEmail.text!, forKey: "user")
-                        defaults.setValue(self.tfContrasena.text!, forKey: "password")
+                        
                         // Ejecutar segue para el usuario admin
                         self.performSegue(withIdentifier: "LogInAdmin", sender: self)
 
