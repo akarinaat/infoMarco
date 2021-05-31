@@ -9,38 +9,28 @@ import UIKit
 import FirebaseDatabase
 
 class ViewControllerAdminPromoBeneficios: UIViewController, UITableViewDelegate, UITableViewDataSource,protocoloAgregaPromocion {
-    func agregarPromocion(not: Promo) {
-//        HOLI
-    }
     
     var ref: DatabaseReference?
     var arrPromos = [Promo]()
     
     
     @IBOutlet weak var tableView: UITableView!
-    
-//    iboutlet del tableview
-//    iboutlet
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         ref = Database.database().reference().child("Promociones")
         ref?.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount>=0{
+                self.arrPromos.removeAll(keepingCapacity: false)
                 for promos in snapshot.children.allObjects as! [DataSnapshot] {
                     let promoObj = promos.value as? [String:String]
                     let promoTitulo = promoObj?["titulo"]
                     let promoContenido = promoObj?["contenido"]
-               
-                  
                     let promocionesMarco = Promo(titulo: promoTitulo ?? "", contenido: promoContenido ?? "")
                     self.arrPromos.append(promocionesMarco)}
             }
             self.tableView.reloadData()
-        }
-        
-             )
+        })
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -78,9 +68,9 @@ class ViewControllerAdminPromoBeneficios: UIViewController, UITableViewDelegate,
         return 140
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       let vistaPublicar = segue.destination as! ViewControllerAdminPublicarPromoBeneficio
-       vistaPublicar.delegado = self
+    func agregarPromocion(not: Promo) {
+        arrPromos.append(not)
+        tableView.reloadData()
     }
 
 }
