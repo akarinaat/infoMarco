@@ -65,7 +65,7 @@ class ViewControllerAdminPromoBeneficios: UIViewController, UITableViewDelegate,
     
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return 141
     }
     
     func agregarPromocion(not: Promo) {
