@@ -204,13 +204,13 @@ class ViewController: UIViewController {
                             let defaults = UserDefaults.standard
                             
                             let nombreCompleto = usr!.sNombres + " " + usr!.sApellidos
-                            defaults.set(self.tfEmail.text!, forKey: "user")
-                            defaults.set(self.tfContrasena.text!, forKey: "password")
+                            //este lo uso para crear confirmacion de eventos
+                            defaults.setValue(self.tfEmail.text!, forKey: "user")
+                            defaults.setValue(self.tfContrasena.text!, forKey: "password")
                             defaults.setValue(nombreCompleto, forKey: "NombreCompleto")
                             defaults.set(usr!.sMiembro_Desde, forKey: "MiembroDesde")
                             defaults.set(usr!.sCategoria, forKey: "TipoMemb")
                             defaults.set(usr!.sFecha_Ven, forKey: "FechaRenov")
-                            
                             // Ejecutar segue para el usuario
                             self.performSegue(withIdentifier: "LogIn", sender: self)
                             
@@ -250,8 +250,8 @@ class ViewController: UIViewController {
                     
                     if let result = result, error == nil {
                         let defaults = UserDefaults.standard
-                        defaults.set(self.tfEmail.text!, forKey: "user")
-                        defaults.set(self.tfContrasena.text!, forKey: "password")
+                        defaults.setValue(self.tfEmail.text!, forKey: "user")
+                        defaults.setValue(self.tfContrasena.text!, forKey: "password")
                         // Ejecutar segue para el usuario admin
                         self.performSegue(withIdentifier: "LogInAdmin", sender: self)
 
