@@ -20,7 +20,6 @@ class ViewControllerLectorEventos: UIViewController {
     @IBOutlet weak var tfQRCode: UITextField!
     @IBOutlet weak var lbEventoName: UILabel!
     @IBOutlet weak var buttonVery: UIButton!
-    @IBOutlet weak var buttonVeryBoleto: UIButton!
     
     var qrCodeString: String!
     var nombreEvento = ""
@@ -36,7 +35,6 @@ class ViewControllerLectorEventos: UIViewController {
         super.viewDidLoad()
         lbEventoName.text = nombreEvento
         // Do any additional setup after loading the view.
-        buttonVeryBoleto.isEnabled = false
         
     }
     
@@ -46,9 +44,8 @@ class ViewControllerLectorEventos: UIViewController {
         
     }
     
-    @IBAction func qrVerify(_ sender: UIButton) {
+    @IBAction func qrVerify(_ sender: Any) {
         boolean = false
-        sender.setTitleColor(UIColor.green, for: .normal)
         qrCodeString = tfQRCode.text
         ref = Database.database().reference().child("reservaciones")
         ref?.observe(DataEventType.value, with: {(snapshot) in
@@ -64,7 +61,7 @@ class ViewControllerLectorEventos: UIViewController {
                 }
             }
         })
-        buttonVeryBoleto.isEnabled = true
+        buttonVery.tintColor = UIColor.green
     }
     
     
