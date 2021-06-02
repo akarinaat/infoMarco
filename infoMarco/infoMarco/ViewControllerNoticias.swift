@@ -26,7 +26,7 @@ class ViewControllerNoticias: UIViewController, UITableViewDelegate, UITableView
         ref = Database.database().reference().child("Noticias")
         ref?.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount>=0{
-
+                self.arrNoticias.removeAll(keepingCapacity: false)
                 for noticias in snapshot.children.allObjects as! [DataSnapshot] {
                     let NoticiaObj = noticias.value as? [String:String]
                     let notTitulo = NoticiaObj?["titulo"]

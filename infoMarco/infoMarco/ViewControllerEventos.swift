@@ -24,7 +24,7 @@ class ViewControllerEventos: UIViewController, UITableViewDelegate, UITableViewD
         ref = Database.database().reference().child("marcoEvent")
         ref?.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount>=0{
-
+                self.arrEventos.removeAll(keepingCapacity: false)
                 for events in snapshot.children.allObjects as! [DataSnapshot] {
                     let eventObj = events.value as? [String:String]
                     let eventoTitulo = eventObj?["titulo"]

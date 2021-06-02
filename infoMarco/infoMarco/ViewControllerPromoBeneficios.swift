@@ -23,7 +23,7 @@ class ViewControllerPromoBeneficios: UIViewController, UITableViewDelegate, UITa
         ref = Database.database().reference().child("Promociones")
         ref?.observe(DataEventType.value, with: {(snapshot) in
             if snapshot.childrenCount>=0{
-
+                self.arrPromos.removeAll(keepingCapacity: false)
                 for promos in snapshot.children.allObjects as! [DataSnapshot] {
                     let promoObj = promos.value as? [String:String]
                     let promoTitulo = promoObj?["titulo"]
